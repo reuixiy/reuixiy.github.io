@@ -1,0 +1,544 @@
+<!doctype html><html lang=zh-cn><head prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#"><meta charset=utf-8><meta name=generator content="Hugo 0.85.0"><meta name=theme-color content="#fff"><meta name=viewport content="width=device-width,initial-scale=1"><meta name=format-detection content="telephone=no, date=no, address=no, email=no"><meta http-equiv=cache-control content="no-transform"><meta http-equiv=cache-control content="no-siteapp"><title>Hello, Arch Linux! | reuixiy</title><link rel=stylesheet href=/css/meme.min.css><script src=/js/meme.min.js></script><link rel=preconnect href=https://fonts.gstatic.com crossorigin><link rel=stylesheet href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;700&family=Source+Code+Pro:ital,wght@0,400;0,700;1,400;1,700&family=Cinzel+Decorative:wght@700&display=swap" media=print onload="this.media='all'"><noscript><link rel=stylesheet href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;700&family=Source+Code+Pro:ital,wght@0,400;0,700;1,400;1,700&family=Cinzel+Decorative:wght@700&display=swap"></noscript><meta name=author content="reuixiy"><meta name=description content="Keep it Simple"><link rel="shortcut icon" href=/favicon.ico type=image/x-icon><link rel=mask-icon href=/icons/safari-pinned-tab.svg color=#2a6df4><link rel=apple-touch-icon sizes=180x180 href=/icons/apple-touch-icon.png><meta name=apple-mobile-web-app-capable content="yes"><meta name=apple-mobile-web-app-title content="reuixiy"><meta name=apple-mobile-web-app-status-bar-style content="black"><meta name=mobile-web-app-capable content="yes"><meta name=application-name content="reuixiy"><meta name=msapplication-starturl content="../../"><meta name=msapplication-TileColor content="#fff"><meta name=msapplication-TileImage content="../../icons/mstile-150x150.png"><link rel=manifest href=/manifest.json><link rel=canonical href=https://io-oi.me/tech/hello-arch-linux/><script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","datePublished":"2018-12-11T01:46:06+08:00","dateModified":"2021-01-21T19:50:22+08:00","url":"https://io-oi.me/tech/hello-arch-linux/","headline":"Hello, Arch Linux!","description":"Keep it Simple","inLanguage":"zh-CN","articleSection":"tech","wordCount":8321,"image":["https://io-oi.me/images/hello-arch-linux.jpg","https://io-oi.me/images/hello-arch-linux-0.jpg","https://io-oi.me/images/hello-arch-linux-1.jpg","https://io-oi.me/images/gnome-alert-sound.png","https://io-oi.me/images/power.png","https://io-oi.me/images/gimp.png","https://io-oi.me/images/kid3.png","https://io-oi.me/images/flameshot.png","https://io-oi.me/images/tweaks-fonts.png","https://io-oi.me/images/arch-wiki-english.png","https://io-oi.me/images/arch-wiki-chinese.png","https://io-oi.me/images/dota2.png","https://io-oi.me/images/xonotic-1.jpg","https://io-oi.me/images/xonotic-2.jpg","https://io-oi.me/images/steam.png","https://io-oi.me/images/steam-proton.png","https://io-oi.me/images/lightdm-material.jpg","https://io-oi.me/images/fcitx-pinyin.png"],"author":{"@type":"Person","description":"Viva La Vida","email":"reuixiy@gmail.com","image":"https://io-oi.me/icons/apple-touch-icon.png","url":"https://io-oi.me/","name":"reuixiy"},"license":"在保留本文作者及本文链接的前提下，非商业用途随意转载分享。","publisher":{"@type":"Organization","name":"reuixiy","logo":{"@type":"ImageObject","url":"https://io-oi.me/icons/apple-touch-icon.png"},"url":"https://io-oi.me/"},"mainEntityOfPage":{"@type":"WebSite","@id":"https://io-oi.me/"}}</script><meta name=twitter:card content="summary_large_image"><meta name=twitter:site content="@reuixiy"><meta name=twitter:creator content="@reuixiy"><meta property="og:title" content="Hello, Arch Linux!"><meta property="og:description" content="Keep it Simple"><meta property="og:url" content="https://io-oi.me/tech/hello-arch-linux/"><meta property="og:site_name" content="reuixiy"><meta property="og:locale" content="zh"><meta property="og:image" content="https://io-oi.me/images/hello-arch-linux.jpg"><meta property="og:type" content="article"><meta property="article:published_time" content="2018-12-11T01:46:06+08:00"><meta property="article:modified_time" content="2021-01-21T19:50:22+08:00"><meta property="article:section" content="tech"><link rel=preconnect href=https://www.google-analytics.com crossorigin><script async src="https://www.googletagmanager.com/gtag/js?id=UA-100434861-1"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date),gtag('config','UA-100434861-1')</script><link rel=stylesheet href="https://fonts.googleapis.com/css2?family=Lato:wght@700&text=reuixiy&display=swap" media=print onload="this.media='all'"><noscript><link rel=stylesheet href="https://fonts.googleapis.com/css2?family=Lato:wght@700&text=reuixiy&display=swap"></noscript></head><body><div class=container><header class=header><div class=header-wrapper><div class="header-inner single"><div class=site-brand><a href=/ class=brand>reuixiy</a></div><nav class=nav><ul class=menu id=menu><li class=menu-item><a href=/life/><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon life"><path d="M301.1 212c4.4 4.4 4.4 11.9.0 16.3l-9.7 9.7c-4.4 4.7-11.9 4.7-16.6.0l-10.5-10.5c-4.4-4.7-4.4-11.9.0-16.6l9.7-9.7c4.4-4.4 11.9-4.4 16.6.0l10.5 10.8zm-30.2-19.7c3-3 3-7.8.0-10.5-2.8-3-7.5-3-10.5.0-2.8 2.8-2.8 7.5.0 10.5 3.1 2.8 7.8 2.8 10.5.0zm-26 5.3c-3 2.8-3 7.5.0 10.2 2.8 3 7.5 3 10.5.0 2.8-2.8 2.8-7.5.0-10.2-3-3-7.7-3-10.5.0zm72.5-13.3c-19.9-14.4-33.8-43.2-11.9-68.1 21.6-24.9 40.7-17.2 59.8.8 11.9 11.3 29.3 24.9 17.2 48.2-12.5 23.5-45.1 33.2-65.1 19.1zm47.7-44.5c-8.9-10-23.3 6.9-15.5 16.1 7.4 9 32.1 2.4 15.5-16.1zM504 256c0 137-111 248-248 248S8 393 8 256 119 8 256 8s248 111 248 248zm-66.2 42.6c2.5-16.1-20.2-16.6-25.2-25.7-13.6-24.1-27.7-36.8-54.5-30.4 11.6-8 23.5-6.1 23.5-6.1.3-6.4.0-13-9.4-24.9 3.9-12.5.3-22.4.3-22.4 15.5-8.6 26.8-24.4 29.1-43.2 3.6-31-18.8-59.2-49.8-62.8-22.1-2.5-43.7 7.7-54.3 25.7-23.2 40.1 1.4 70.9 22.4 81.4-14.4-1.4-34.3-11.9-40.1-34.3-6.6-25.7 2.8-49.8 8.9-61.4.0.0-4.4-5.8-8-8.9.0.0-13.8.0-24.6 5.3 11.9-15.2 25.2-14.4 25.2-14.4.0-6.4-.6-14.9-3.6-21.6-5.4-11-23.8-12.9-31.7 2.8.1-.2.3-.4.4-.5-5 11.9-1.1 55.9 16.9 87.2-2.5 1.4-9.1 6.1-13 10-21.6 9.7-56.2 60.3-56.2 60.3-28.2 10.8-77.2 50.9-70.6 79.7.3 3 1.4 5.5 3 7.5-2.8 2.2-5.5 5-8.3 8.3-11.9 13.8-5.3 35.2 17.7 24.4 15.8-7.2 29.6-20.2 36.3-30.4.0.0-5.5-5-16.3-4.4 27.7-6.6 34.3-9.4 46.2-9.1 8 3.9 8-34.3 8-34.3.0-14.7-2.2-31-11.1-41.5 12.5 12.2 29.1 32.7 28 60.6-.8 18.3-15.2 23-15.2 23-9.1 16.6-43.2 65.9-30.4 106 0 0-9.7-14.9-10.2-22.1-17.4 19.4-46.5 52.3-24.6 64.5 26.6 14.7 108.8-88.6 126.2-142.3 34.6-20.8 55.4-47.3 63.9-65 22 43.5 95.3 94.5 101.1 59z"/></svg><span class=menu-item-name>生活</span></a></li><li class=menu-item><a href=/tech/><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon tech"><path d="M512 256c0 141.2-114.7 256-256 256C114.8 512 0 397.3.0 256S114.7.0 256 0s256 114.7 256 256zm-32 0c0-123.2-100.3-224-224-224C132.5 32 32 132.5 32 256s100.5 224 224 224 224-100.5 224-224zM160.9 124.6l86.9 37.1-37.1 86.9-86.9-37.1 37.1-86.9zm110 169.1 46.6 94h-14.6l-50-1e2-48.9 1e2h-14l51.1-106.9-22.3-9.4 6-14 68.6 29.1-6 14.3-16.5-7.1zm-11.8-116.3 68.6 29.4-29.4 68.3L230 246l29.1-68.6zm80.3 42.9 54.6 23.1-23.4 54.3-54.3-23.1 23.1-54.3z"/></svg><span class=menu-item-name>技术</span></a></li><li class=menu-item><a href=/about/><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" class="icon about"><path d="M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zm0 96c48.6.0 88 39.4 88 88s-39.4 88-88 88-88-39.4-88-88 39.4-88 88-88zm0 344c-58.7.0-111.3-26.6-146.5-68.2 18.8-35.4 55.6-59.8 98.5-59.8 2.4.0 4.8.4 7.1 1.1 13 4.2 26.6 6.9 40.9 6.9s28-2.7 40.9-6.9c2.3-.7 4.7-1.1 7.1-1.1 42.9.0 79.7 24.4 98.5 59.8C359.3 421.4 306.7 448 248 448z"/></svg><span class=menu-item-name>关于</span></a></li><li class=menu-item><a id=theme-switcher href=#><span class="icon theme-icon-light">🌞</span><span class="icon theme-icon-dark">🌙</span></a></li></ul></nav></div></div><input type=checkbox id=nav-toggle aria-hidden=true>
+<label for=nav-toggle class=nav-toggle></label><label for=nav-toggle class=nav-curtain></label></header><main class="main single" id=main><div class=main-inner><article class="content post h-entry" data-align=justify data-type=tech data-toc-num=true><h1 class="post-title p-name">Hello, Arch Linux!</h1><div class="post-description p-summary">Keep it Simple</div><nav class=contents><h2 id=contents class=contents-title>目录</h2><ol class=toc><li><a id=contents:文章前言 href=#文章前言>文章前言</a></li><li><a id=contents:视频预览 href=#视频预览>视频预览</a></li><li><a id=contents:安装配置 href=#安装配置>安装配置</a><ol><li><a id=contents:安装系统 href=#安装系统>安装系统</a><ol><li><a id=contents:安装介质 href=#安装介质>安装介质</a></li><li><a id=contents:开始安装 href=#开始安装>开始安装</a></li><li><a id=contents:验证启动模式 href=#验证启动模式>验证启动模式</a></li><li><a id=contents:验证网络连接 href=#验证网络连接>验证网络连接</a></li><li><a id=contents:更新系统时间 href=#更新系统时间>更新系统时间</a></li><li><a id=contents:硬盘分区 href=#硬盘分区>硬盘分区</a></li><li><a id=contents:文件系统 href=#文件系统>文件系统</a></li><li><a id=contents:挂载分区 href=#挂载分区>挂载分区</a></li><li><a id=contents:选择镜像源 href=#选择镜像源>选择镜像源</a></li><li><a id=contents:安装基本系统到硬盘 href=#安装基本系统到硬盘>安装基本系统到硬盘</a></li></ol></li><li><a id=contents:配置系统 href=#配置系统>配置系统</a><ol><li><a id=contents:生成挂载表 href=#生成挂载表>生成挂载表</a></li><li><a id=contents:时区和语言 href=#时区和语言>时区和语言</a></li><li><a id=contents:安装引导程序 href=#安装引导程序>安装引导程序</a></li><li><a id=contents:设置主机名 href=#设置主机名>设置主机名</a></li><li><a id=contents:提前配置网络 href=#提前配置网络>提前配置网络</a></li><li><a id=contents:设置-root-的密码 href=#设置-root-的密码>设置 root 的密码</a></li><li><a id=contents:新建普通用户 href=#新建普通用户>新建普通用户</a></li><li><a id=contents:重启系统 href=#重启系统>重启系统</a></li></ol></li><li><a id=contents:完善系统 href=#完善系统>完善系统</a><ol><li><a id=contents:启用微码更新 href=#启用微码更新>启用微码更新</a></li><li><a id=contents:完善显卡驱动 href=#完善显卡驱动>完善显卡驱动</a></li><li><a id=contents:安装图形界面 href=#安装图形界面>安装图形界面</a></li><li><a id=contents:lightdm href=#lightdm>LightDM</a></li><li><a id=contents:声音配置 href=#声音配置>声音配置</a></li><li><a id=contents:显示屏亮度 href=#显示屏亮度>显示屏亮度</a></li><li><a id=contents:安装输入法 href=#安装输入法>安装输入法</a></li></ol></li><li><a id=contents:驱动问题 href=#驱动问题>驱动问题</a><ol><li><a id=contents:无线 href=#无线>无线</a></li><li><a id=contents:蓝牙 href=#蓝牙>蓝牙</a></li><li><a id=contents:显卡 href=#显卡>显卡</a></li></ol></li><li><a id=contents:ssd-优化 href=#ssd-优化>SSD 优化</a><ol><li><a id=contents:开启-trim href=#开启-trim>开启 TRIM</a></li><li><a id=contents:更换-io-scheduler href=#更换-io-scheduler>更换 I/O scheduler</a></li><li><a id=contents:迁移高读写文件到-tmpfs href=#迁移高读写文件到-tmpfs>迁移高读写文件到 tmpfs</a></li><li><a id=contents:查看固态硬盘信息 href=#查看固态硬盘信息>查看固态硬盘信息</a></li><li><a id=contents:测试固态硬盘速度 href=#测试固态硬盘速度>测试固态硬盘速度</a></li></ol></li></ol></li><li><a id=contents:现代桌面 href=#现代桌面>现代桌面</a><ol><li><a id=contents:基本配置 href=#基本配置>基本配置</a></li><li><a id=contents:软件安装 href=#软件安装>软件安装</a><ol><li><a id=contents:必备工具 href=#必备工具>必备工具</a></li><li><a id=contents:yay href=#yay>yay</a></li><li><a id=contents:必备软件 href=#必备软件>必备软件</a></li></ol></li><li><a id=contents:软件配置 href=#软件配置>软件配置</a><ol><li><a id=contents:redshift href=#redshift>Redshift</a></li><li><a id=contents:flameshot href=#flameshot>Flameshot</a></li><li><a id=contents:阿里云-oss-browser href=#阿里云-oss-browser>阿里云 OSS Browser</a></li><li><a id=contents:proxychains-ng href=#proxychains-ng>ProxyChains-NG</a></li><li><a id=contents:卸载软件 href=#卸载软件>卸载软件</a></li></ol></li><li><a id=contents:安装字体 href=#安装字体>安装字体</a></li><li><a id=contents:配置字体 href=#配置字体>配置字体</a></li><li><a id=contents:透明终端 href=#透明终端>透明终端</a></li><li><a id=contents:颜色配置 href=#颜色配置>颜色配置</a><ol><li><a id=contents:终端颜色bash href=#终端颜色bash>终端颜色（Bash）</a></li><li><a id=contents:pacman-的颜色 href=#pacman-的颜色>Pacman 的颜色</a></li></ol></li><li><a id=contents:游戏游戏 href=#游戏游戏>游戏游戏</a><ol><li><a id=contents:原生 href=#原生>原生</a></li><li><a id=contents:steam href=#steam>Steam</a></li><li><a id=contents:lutris href=#lutris>Lutris</a></li></ol></li><li><a id=contents:启动界面 href=#启动界面>启动界面</a><ol><li><a id=contents:更换-lightdm-的主题 href=#更换-lightdm-的主题>更换 LightDM 的主题</a></li><li><a id=contents:隐藏-grub-除非按下-shift-键 href=#隐藏-grub-除非按下-shift-键>隐藏 GRUB 除非按下 shift 键</a></li><li><a id=contents:开关机显示内核输出信息 href=#开关机显示内核输出信息>开关机显示内核输出信息</a></li></ol></li><li><a id=contents:其它细节 href=#其它细节>其它细节</a></li></ol></li><li><a id=contents:参考资源 href=#参考资源>参考资源</a><ol><li><a id=contents:视频 href=#视频>视频</a></li><li><a id=contents:文章 href=#文章>文章</a></li></ol></li></ol></nav><div class="post-body e-content"><p><img src=/images/hello-arch-linux.jpg alt=hello-arch-linux.jpg></p><h2 id=文章前言><a href=#文章前言 class=anchor-link>#</a><a href=#contents:文章前言 class=headings>文章前言</a></h2><p style=text-indent:0><span class=drop-cap>在</span><a href=/tech/the-importance-of-data-backup/>硬盘暴废</a>后，终于有机会将 Arch Linux 作为自己的主系统，并在物理机上彻底摆脱了 Windows，给了我这个「极简主义者 + 完美主义者」极大的愉悦😂。在安装和使用 Arch Linux 的过程中，自己也能切身体会到下面这句话：</p><blockquote><p>A simple, lightweight linux distribution.</p><p>— <em>archlinux</em></p></blockquote><p>以及 KISS (Keep It Simple, Stupid!) 原则，以及：</p><blockquote><p>Arch Linux focus on elegance, code correctness, minimalist system and simplicity.</p><p>— <em><a href=https://itsfoss.com/install-arch-linux/ target=_blank rel=noopener>https://itsfoss.com/install-arch-linux/</a></em></p></blockquote><p>更多可阅读：</p><ol><li><a href=https://en.wikipedia.org/wiki/Arch_Linux target=_blank rel=noopener>Arch Linux | Wikipedia</a></li><li><a href=https://wiki.archlinux.org/index.php/Arch_Linux target=_blank rel=noopener>Arch Linux | ArchWiki</a></li><li><a href=http://www.linux-mag.com/id/7469/ target=_blank rel=noopener>Arch Linux: The Simple, Flexible (and Fast!) Distro | Linux Magazine</a></li></ol><p>使用 Arch Linux 的过程中，最令人满意及兴奋的莫过于它拥有丰富且快速更新的软件仓库，一些我之前在 Kali 无法直接 apt-get 安装的软件包，在 Arch Linux 都能直接用 pacman 安装最新稳定版（或用 yay 直接安装 AUR 中的软件包，比如驱动）。更重要的一点，直接用 C 语言编写的软件包管理器 Pacman 体验极佳，高效！</p><p>另外，Arch Linux 的 <a href=https://wiki.archlinux.org/ target=_blank rel=noopener>Wiki</a> 可以说非常完备，从系统的安装到配置，以及软件的安装到配置，都非常详细。下面，记录一下我安装 Arch Linux 的过程，以及一些配置的细节。</p><p>提示：如果在安装、配置过程中有疑问，或者遇到报错，直接 <code>arch linux + 英文描述</code> Google 就能迅速解决。</p><h2 id=视频预览><a href=#视频预览 class=anchor-link>#</a><a href=#contents:视频预览 class=headings>视频预览</a></h2><p><video src=https://gateway.pinata.cloud/ipfs/QmTLQwySHcpa3rd8duaqi6zdsATzmSzeNL9kUhP9Ena6Sc type=video/mp4 controls></video></p><h2 id=安装配置><a href=#安装配置 class=anchor-link>#</a><a href=#contents:安装配置 class=headings>安装配置</a></h2><p>我的安装环境：物理机 + 两块全新硬盘 + UEFI + 有线网络（直连路由器）。</p><h3 id=安装系统><a href=#安装系统 class=anchor-link>#</a><a href=#contents:安装系统 class=headings>安装系统</a></h3><p>对于新手，下文中用 <code>vim</code> 的操作都可以用对新手友好的 <code>nano</code> 操作。</p><h4 id=安装介质><a href=#安装介质 class=anchor-link>#</a><a href=#contents:安装介质 class=headings>安装介质</a></h4><p>Windows 下去<a href=https://www.archlinux.org/download/ target=_blank rel=noopener>官网</a>下载 ISO 文件，然后用 <a href=https://sourceforge.net/projects/win32diskimager/ target=_blank rel=noopener>Win32 Disk Imager</a> 写入准备好的且空的 U 盘。</p><h4 id=开始安装><a href=#开始安装 class=anchor-link>#</a><a href=#contents:开始安装 class=headings>开始安装</a></h4><p>Arch Linux 的安装需要网络连接，检查电脑是否接好从路由器来的网线。插入 U 盘，开机按 ESC 键选择 U 盘启动，顺利进入 UEFI 安装界面：</p><p><img src=/images/hello-arch-linux-0.jpg alt=hello-arch-linux-0.jpg></p><p>直接第一个启动，稍等片刻后顺利进入 U 盘中的系统，终端命令行界面，鼠标无效。</p><p><img src=/images/hello-arch-linux-1.jpg alt=hello-arch-linux-1.jpg></p><p>输入 <code>ls</code> 回车查看当前目录下的文件，看到有个 install.txt 安装教程。可输入命令 <code>cat i</code> + tab 键自动补全后回车查看（shift + pgup/pgdn 可上下翻页），也可用 <code>vim</code> 或 <code>nano</code> 查看。</p><h4 id=验证启动模式><a href=#验证启动模式 class=anchor-link>#</a><a href=#contents:验证启动模式 class=headings>验证启动模式</a></h4><pre><code># ls /sys/firmware/efi/efivars
+</code></pre><p>有输出，确认启动模式为 UEFI，确认无误。</p><h4 id=验证网络连接><a href=#验证网络连接 class=anchor-link>#</a><a href=#contents:验证网络连接 class=headings>验证网络连接</a></h4><pre><code># ping archlinux.org -c 3
+</code></pre><p>检查输出，0% packet loss，网络连接正常。</p><h4 id=更新系统时间><a href=#更新系统时间 class=anchor-link>#</a><a href=#contents:更新系统时间 class=headings>更新系统时间</a></h4><pre><code># timedatectl set-ntp true
+</code></pre><p>检查：</p><pre><code># timedatectl status
+</code></pre><p>确认无误。</p><h4 id=硬盘分区><a href=#硬盘分区 class=anchor-link>#</a><a href=#contents:硬盘分区 class=headings>硬盘分区</a></h4><p><code>lsblk</code> 和 <code>fdisk -l</code> 查看硬盘的信息，可以看到两个全新的 120G 硬盘，确认无误。</p><p>事先准备好的方案：</p><div class=table-container><table><thead><tr><th style=text-align:center>分区</th><th style=text-align:center>文件系统</th><th style=text-align:center>大小</th><th style=text-align:center>描述</th><th style=text-align:center>挂载点</th></tr></thead><tbody><tr><td style=text-align:center>sda1</td><td style=text-align:center>fat32</td><td style=text-align:center>256 MiB</td><td style=text-align:center>EFI 引导分区</td><td style=text-align:center>/boot/efi</td></tr><tr><td style=text-align:center>sda2</td><td style=text-align:center>ext4</td><td style=text-align:center>余下所有</td><td style=text-align:center>系统根分区</td><td style=text-align:center>/</td></tr><tr><td style=text-align:center>sdb</td><td style=text-align:center>ext4</td><td style=text-align:center>整块硬盘</td><td style=text-align:center>家目录</td><td style=text-align:center>/home</td></tr></tbody></table></div><p>再次 <code>lsblk</code> 查看硬盘的信息，核对无误后进行分区操作。</p><pre><code># fdisk /dev/sda
+</code></pre><p>回车后进入 fdisk 的操作界面，按提示输入 <code>m</code> 后查看手册，输入 <code>p</code> 显示硬盘当前的分区，确认无误后继续进行分区操作。</p><p>1）创建分区表，输入 <code>g</code> 创建一个全新的 GPT (GUID Partition Table) 分区表。</p><p>2）创建 sda1 分区，输入 <code>n</code> 创建一个新的分区，分区类型默认回车，分区序号默认回车，起始扇区默认回车，结束扇区输入 <code>+256M</code> 回车。</p><p>3）修改分区类型，输入 <code>t</code>，分区序号默认回车，可输入 <code>l</code> 查看所有支持的类型，输入 <code>ef</code> 更改分区的类型为 EFI。输入 <code>p</code> 检查无误。</p><p>4）创建 sda2 分区，输入 <code>n</code> 创建一个新的分区，分区类型默认回车，分区序号默认回车，起始扇区默认回车，结束扇区默认回车。由于默认的分区类型即为 Linux filesystem，所以无需更改。输入 <code>p</code> 检查无误。</p><p>5）再次检查，确认无误，输入 <code>w</code> 回车后写入硬盘，稍等片刻，分区结束。</p><h4 id=文件系统><a href=#文件系统 class=anchor-link>#</a><a href=#contents:文件系统 class=headings>文件系统</a></h4><p><code>lsblk</code> 查看硬盘的信息，然后进行格式化操作。</p><p>格式化 sda1：</p><pre><code># mkfs.fat -F32 /dev/sda1
+</code></pre><p>格式化 sda2：</p><pre><code># mkfs.ext4 /dev/sda2
+</code></pre><p>格式化 sdb：</p><pre><code># mkfs.ext4 /dev/sdb
+</code></pre><h4 id=挂载分区><a href=#挂载分区 class=anchor-link>#</a><a href=#contents:挂载分区 class=headings>挂载分区</a></h4><pre><code># mount /dev/sda2 /mnt
+
+# mkdir -p /mnt/boot/efi
+# mount /dev/sda1 /mnt/boot/efi
+
+# mkdir /mnt/home
+# mount /dev/sdb /mnt/home
+</code></pre><p>输入 <code>lsblk</code>，确认无误。</p><h4 id=选择镜像源><a href=#选择镜像源 class=anchor-link>#</a><a href=#contents:选择镜像源 class=headings>选择镜像源</a></h4><p>推荐使用 <a href=https://wiki.archlinux.org/index.php/reflector target=_blank rel=noopener>reflector</a>：</p><pre><code># pacman -Syyy reflector
+# reflector -c China -a 6 --sort rate --save /etc/pacman.d/mirrorlist
+# pacman -Syyy
+</code></pre><p>或者，可以手动编辑文件：</p><pre><code># vim /etc/pacman.d/mirrorlist
+</code></pre><p>1）按下 <code>/</code> 进入搜索界面，然后输入 <code>## China</code> 回车，按下 <code>2</code> 选择两行，按下 <code>dd</code> 剪切，按下 <code>gg</code> 回到文件首，移动光标，按下 <code>p</code> 粘贴。</p><p>2）再次按下 <code>/</code> 进入搜索界面，按下方向键 <code>↑</code> 后回车继续搜索，然后按下 <code>n</code> 搜索下一个（<code>N</code> 搜索上一个），重复上面剪切粘贴操作（<code>u</code> 撤销操作）。</p><p>3）最后，按下 <code>ESC</code> 键，然后输入 <code>:wq</code> 保存并退出（<code>q!</code> 不保存退出）。</p><p>当然，也可以不用 vim 用 nano。</p><h4 id=安装基本系统到硬盘><a href=#安装基本系统到硬盘 class=anchor-link>#</a><a href=#contents:安装基本系统到硬盘 class=headings>安装基本系统到硬盘</a></h4><pre><code># pacstrap -i /mnt base base-devel linux linux-firmware dhcpcd
+</code></pre><p>默认回车，然后输入 <code>y</code>，等待一会，等待安装完成。</p><h3 id=配置系统><a href=#配置系统 class=anchor-link>#</a><a href=#contents:配置系统 class=headings>配置系统</a></h3><p>经过上一步的操作，系统已经复制（安装）到了我们的硬盘，但此时直接重启是无法进入系统的。接下来，进行一些必备配置以供启动，以及一些本地环境的配置。</p><h4 id=生成挂载表><a href=#生成挂载表 class=anchor-link>#</a><a href=#contents:生成挂载表 class=headings>生成挂载表</a></h4><p>生成自动挂载分区的 fstab 文件：</p><pre><code># genfstab -U -p /mnt &gt;&gt; /mnt/etc/fstab
+</code></pre><p>检查一下：</p><pre><code># cat /mnt/etc/fstab
+</code></pre><p>确认无误。</p><h4 id=时区和语言><a href=#时区和语言 class=anchor-link>#</a><a href=#contents:时区和语言 class=headings>时区和语言</a></h4><p>考虑到地球上的不同地区有不同时区与语言，所以必须配置下系统的本地环境。另，考虑到重启一次系统很麻烦，故直接在此先行配置。</p><p>1）先切换到硬盘安装的新系统：</p><pre><code># arch-chroot /mnt /bin/bash
+</code></pre><p>这意味着直到我们 <code>exit</code> 之前，下面所有的操作都是在硬盘中的系统中运行，而非 U 盘。</p><p>2）设置时区：</p><pre><code># ln -sf /usr/share/zoneinfo/Asia/Hong_Kong /etc/localtime
+# hwclock --systohc --utc
+</code></pre><p>你也可以选择 Shanghai，我习惯了 HKT，它们的时间是一样的。</p><p>3）配置系统语言环境：</p><pre><code># nano /etc/locale.gen
+</code></pre><p>按下 <code>ctrl</code> + <code>w</code> 搜索，分别输入 <code>en_US</code> 和 <code>#zh</code>，分别找到下面两行，并删除前面的 <code>#</code> 注释符：</p><div class=highlight><pre class=chroma><code class=language-txt data-lang=txt>en_US.UTF-8 UTF-8
+zh_CN.UTF-8 UTF-8
+</code></pre></div><p>完成后按下 <code>ctrl</code> + <code>o</code> 回车保存，然后按下 <code>ctrl</code> + <code>x</code> 退出。</p><p>最后执行：</p><pre><code># locale-gen
+</code></pre><p>台湾的朋友，请用 <code>zh_TW.UTF-8</code> 替代 <code>zh_CN.UTF-8</code>。</p><p>4）设置本地语言环境：</p><pre><code># nano /etc/locale.conf
+</code></pre><p>输入以下内容：</p><div class=highlight><pre class=chroma><code class=language-txt data-lang=txt>LANG=en_US.UTF-8
+</code></pre></div><p>保存并退出。</p><hr><p>对于本地语言环境，建议 English，理由如下：</p><ol><li><a href=https://wiki.archlinux.org/index.php/Installation_guide target=_blank rel=noopener>Wiki</a> 中提到的问题。</li><li>用英文作为系统的界面和程序的菜单的语言更为优雅。因为中文作为我们的母语，会比英文更吸引我们的注意力。我们的要专注的是在界面内或程序的操作，而不是菜单，故用英文更为优雅。</li><li>配置简单，顺便学英语。</li></ol><h4 id=安装引导程序><a href=#安装引导程序 class=anchor-link>#</a><a href=#contents:安装引导程序 class=headings>安装引导程序</a></h4><pre><code># pacman -S grub efibootmgr
+# grub-install --target=x86_64-efi --bootloader-id=GRUB --efi-directory=/boot/efi
+# grub-mkconfig -o /boot/grub/grub.cfg
+</code></pre><h4 id=设置主机名><a href=#设置主机名 class=anchor-link>#</a><a href=#contents:设置主机名 class=headings>设置主机名</a></h4><p>对于桌面用户，所谓主机名，即终端 <code>@</code> 符后面的名字，也是本地局域网内其它设备所见的名字。</p><pre><code># echo arch &gt; /etc/hostname
+</code></pre><pre><code># nano /etc/hosts
+</code></pre><p>在文件末添加以下内容：</p><pre><code>127.0.0.1 localhost
+::1       localhost
+127.0.1.1 arch.localdomain  arch
+</code></pre><p>检查无误后，ctrl + o 保存，ctrl + x 退出。</p><h4 id=提前配置网络><a href=#提前配置网络 class=anchor-link>#</a><a href=#contents:提前配置网络 class=headings>提前配置网络</a></h4><pre><code># pacman -S networkmanager
+# systemctl enable NetworkManager
+</code></pre><h4 id=设置-root-的密码><a href=#设置-root-的密码 class=anchor-link>#</a><a href=#contents:设置-root-的密码 class=headings>设置 root 的密码</a></h4><pre><code># passwd
+</code></pre><p>输入后回车即可，输入时无显示，需输入两次。</p><h4 id=新建普通用户><a href=#新建普通用户 class=anchor-link>#</a><a href=#contents:新建普通用户 class=headings>新建普通用户</a></h4><pre><code># useradd -m -g users -G wheel -s /bin/bash archie
+</code></pre><p>设置普通用户的密码：</p><pre><code># passwd archie
+</code></pre><p>设置普通用户的权限：</p><pre><code># EDITOR=nano visudo
+</code></pre><p>找到下面内容并删除相应两行前面的 <code>#</code> 注释符：</p><div class=highlight><pre class=chroma><code class=language-diff data-lang=diff>## Uncomment to allow members of group wheel to execute any command
+%wheel ALL=(ALL) ALL
+
+## Same thing without a password
+%wheel ALL=(ALL) NOPASSWD: ALL
+</code></pre></div><h4 id=重启系统><a href=#重启系统 class=anchor-link>#</a><a href=#contents:重启系统 class=headings>重启系统</a></h4><p>回到 U 盘中的系统：</p><pre><code># exit
+</code></pre><p>重启：</p><pre><code># umount -R /mnt
+# reboot
+</code></pre><p>开机时按 ESC 进入 BIOS 设置硬盘的启动顺序，然后拔掉 U 盘，保存后从 BIOS 重启。</p><p>用普通用户 archie 及设置的密码登入，登入后为终端命令行界面，鼠标无效。</p><h3 id=完善系统><a href=#完善系统 class=anchor-link>#</a><a href=#contents:完善系统 class=headings>完善系统</a></h3><p>到此，系统已安装完成，但有的只是终端命令行界面。接下来，安装图形界面，以及进行一些对系统的完善配置。</p><h4 id=启用微码更新><a href=#启用微码更新 class=anchor-link>#</a><a href=#contents:启用微码更新 class=headings>启用微码更新</a></h4><pre><code>$ sudo pacman -S intel-ucode
+$ sudo grub-mkconfig -o /boot/grub/grub.cfg
+</code></pre><h4 id=完善显卡驱动><a href=#完善显卡驱动 class=anchor-link>#</a><a href=#contents:完善显卡驱动 class=headings>完善显卡驱动</a></h4><pre><code>$ sudo pacman -S xf86-video-intel intel-media-driver vulkan-intel xf86-video-amdgpu xf86-video-ati mesa-vdpau vulkan-radeon
+</code></pre><h4 id=安装图形界面><a href=#安装图形界面 class=anchor-link>#</a><a href=#contents:安装图形界面 class=headings>安装图形界面</a></h4><pre><code>$ sudo pacman -S xorg xorg-server xorg-xinit gnome gnome-extra
+$ systemctl enable gdm
+</code></pre><p>重启，GDM (GNOME Display Manager) 登陆界面，用普通用户 archie 登入系统，顺利进入 GNOME 桌面。</p><p>发现会有卡顿，将 Wayland 更改为 Xorg：</p><pre><code>$ sudo vim /etc/gdm/custom.conf
+</code></pre><p>更改：</p><div class=highlight><pre class=chroma><code class=language-diff data-lang=diff>[daemon]
+# Uncoment the line below to force the login screen to use Xorg
+<span class=gd>-#WaylandEnable=false
+</span><span class=gd></span><span class=gi>+WaylandEnable=false
+</span></code></pre></div><p>重启后解决。</p><h4 id=lightdm><a href=#lightdm class=anchor-link>#</a><a href=#contents:lightdm class=headings>LightDM</a></h4><p>用更轻量级的 LightDM 替换 GDM：</p><pre><code>$ sudo pacman -S lightdm lightdm-gtk-greeter
+$ systemctl disable gdm
+$ systemctl enable lightdm
+</code></pre><p>重启系统，选择 Gnome on Xorg 启动。</p><p>同时，发现启动界面有两个重复的 Gnome 选项，解决方法：</p><pre><code>$ sudo mv /usr/share/wayland-sessions/gnome.desktop /usr/share/wayland-sessions/gnome.desktop.bak
+</code></pre><p><a href=https://forum.antergos.com/topic/6679/gnome-appearing-twice-in-greeter target=_blank rel=noopener>https://forum.antergos.com/topic/6679/gnome-appearing-twice-in-greeter</a></p><h4 id=声音配置><a href=#声音配置 class=anchor-link>#</a><a href=#contents:声音配置 class=headings>声音配置</a></h4><p>进入系统后，默认静音，怎么解决呢？</p><pre><code>$ sudo pacman -S alsa-utils pulseaudio pulseaudio-alsa pavucontrol
+$ man alsamixer
+$ alsamixer
+$ sudo alsactl store
+</code></pre><p>其中，输入 <code>alsamixer</code> 后按下 <code>f1</code> 键查看说明操作：</p><ol><li>按下 <code>f3</code> 键选择播放设备，<code>m</code> 键取消静音，按下 <code>5</code> 键设置为 50%；</li><li>按下 <code>f4</code> 键选择录音设备，同样设置为 50%，然后按下 <code>空格</code> 键关闭录音；</li><li>按下 <code>esc</code> 键退出。</li></ol><p>此外，对于 GNOME，可能要配置下系统提示声音，顶栏最右单击后 > 设置按钮 > Sound：</p><p><img src=/images/gnome-alert-sound.png alt=gnome-alert-sound.png></p><p><a href=https://wiki.archlinux.org/index.php/Advanced_Linux_Sound_Architecture#Unmute_with_alsamixer target=_blank rel=noopener>https://wiki.archlinux.org/index.php/Advanced_Linux_Sound_Architecture#Unmute_with_alsamixer</a></p><h4 id=显示屏亮度><a href=#显示屏亮度 class=anchor-link>#</a><a href=#contents:显示屏亮度 class=headings>显示屏亮度</a></h4><p>对于强迫症用户（比如我），可能在将音量设置为 50% 的同时，也必须把显示屏亮度设置为 50%。</p><pre><code>$ xbacklight -set 50
+</code></pre><p><a href=https://wiki.archlinux.org/index.php/backlight#xbacklight target=_blank rel=noopener>https://wiki.archlinux.org/index.php/backlight#xbacklight</a></p><h4 id=安装输入法><a href=#安装输入法 class=anchor-link>#</a><a href=#contents:安装输入法 class=headings>安装输入法</a></h4><pre><code>$ sudo pacman -S fcitx-im fcitx-configtool
+</code></pre><ol><li>默认回车，全部安装。</li><li>GNOME 设置界面 > Region & Language > Input Sources，删除 English。</li><li>打开终端，输入 <code>fcitx-configtool</code> 回车后出现一个设置界面，左下角 <code>+</code> 添加 Pinyin，关闭界面。</li></ol><p>这样应该就能输入中文了，任意一个窗口，单击左 shift 键切换即可输入。</p><p><a href=https://wiki.archlinux.org/index.php/Fcitx target=_blank rel=noopener>https://wiki.archlinux.org/index.php/Fcitx</a><br><a href=https://www.jianshu.com/p/15c45afc7d80 target=_blank rel=noopener>https://www.jianshu.com/p/15c45afc7d80</a></p><h3 id=驱动问题><a href=#驱动问题 class=anchor-link>#</a><a href=#contents:驱动问题 class=headings>驱动问题</a></h3><p>发现 GNOME 无 Wi-Fi 显示，蓝牙无法开启，缺少驱动。Google 并根据 Wiki 的相关命令查看，发现笔记本是很坑的博通 BCM43142 芯片，无线 + 蓝牙二合一。</p><h4 id=无线><a href=#无线 class=anchor-link>#</a><a href=#contents:无线 class=headings>无线</a></h4><p>首先，根据 <a href=https://wiki.archlinux.org/index.php/broadcom_wireless target=_blank rel=noopener>Wiki</a> 查看芯片的信息：</p><pre><code>$ lspci -vnn -d 14e4:
+</code></pre><p>然后，去 <a href=https://wireless.wiki.kernel.org/en/users/Drivers/brcm80211#supported_chips target=_blank rel=noopener>brcm80211</a> and <a href=https://wireless.wiki.kernel.org/en/users/Drivers/b43#list_of_hardware target=_blank rel=noopener>b43</a> 的列表搜索，发现内核驱动仍在开发之中。</p><p>只得暂时安装闭源的 broadcom-wl：</p><pre><code>$ sudo pacman -S broadcom-wl
+</code></pre><h4 id=蓝牙><a href=#蓝牙 class=anchor-link>#</a><a href=#contents:蓝牙 class=headings>蓝牙</a></h4><p>首先，根据 <a href=https://wiki.archlinux.org/index.php/bluetooth#Foxconn_/_Hon_Hai_/_Lite-On_Broadcom_device target=_blank rel=noopener>Wiki</a> 查看芯片的信息：</p><pre><code>$ lsusb
+</code></pre><p>找到芯片型号 BCM43142A0，Google <code>arch linux BCM43142A0</code> 发现强大的 AUR 中有，于是直接安装（<code>yay</code> 的安装请看<a href=#yay>下文</a>）：</p><pre><code>$ yay -S bcm43142a0-firmware
+</code></pre><p>驱动解决后，继续按照 Wiki 的指示：</p><pre><code>$ sudo pacman -S bluez bluez-utils pulseaudio-bluetooth
+$ systemctl enable bluetooth
+</code></pre><p><a href=https://wiki.archlinux.org/index.php/bluetooth target=_blank rel=noopener>https://wiki.archlinux.org/index.php/bluetooth</a>
+<a href=https://lujun9972.github.io/blog/2017/07/18/%E5%9C%A8archlinux%E4%B8%AD%E4%BD%BF%E7%94%A8%E8%93%9D%E7%89%99%E8%80%B3%E6%9C%BA/ target=_blank rel=noopener>https://lujun9972.github.io/blog/2017/07/18/在archlinux中使用蓝牙耳机/</a></p><h4 id=显卡><a href=#显卡 class=anchor-link>#</a><a href=#contents:显卡 class=headings>显卡</a></h4><p>首先，驱动的安装可参考：</p><ol><li><a href=https://wiki.archlinux.org/index.php/Xorg target=_blank rel=noopener>https://wiki.archlinux.org/index.php/Xorg</a></li><li><a href=https://wiki.archlinux.org/index.php/intel_graphics target=_blank rel=noopener>https://wiki.archlinux.org/index.php/intel_graphics</a></li><li><a href=https://wiki.archlinux.org/index.php/ATI target=_blank rel=noopener>https://wiki.archlinux.org/index.php/ATI</a></li><li><a href=https://wiki.archlinux.org/index.php/NVIDIA target=_blank rel=noopener>https://wiki.archlinux.org/index.php/NVIDIA</a></li><li><a href=https://wiki.archlinux.org/index.php/Hardware_video_acceleration target=_blank rel=noopener>https://wiki.archlinux.org/index.php/Hardware_video_acceleration</a></li></ol><p>我的研究成果在上文的<a href=#%E5%AE%8C%E5%96%84%E6%98%BE%E5%8D%A1%E9%A9%B1%E5%8A%A8>完善显卡驱动</a>。</p><p>然后，对于 AMD 独显的电脑，<a href=https://wiki.archlinux.org/index.php/Hybrid_graphics target=_blank rel=noopener>配置</a>似乎很复杂，我花了很多时间后依然无法禁用默认的 radeon 驱动，依然无法让 Steam 识别到我的独显。</p><p>最后，考虑到我目前的笔记本过于垃圾，一些大型游戏本身就无法良好运行，因此暂时不继续研究。</p><p>1）Intel 集显的屏幕撕裂问题：</p><pre><code class=language-conf data-lang=conf>; 文件位置：/etc/X11/xorg.conf.d/20-intel.conf（新建）
+
+Section &quot;Device&quot;
+  Identifier  &quot;intel&quot;
+  Driver      &quot;intel&quot;
+  Option      &quot;TearFree&quot; &quot;true&quot;
+EndSection
+</code></pre><div class=highlight><pre class=chroma><code class=language-xml data-lang=xml><span class=c>&lt;!-- 文件位置：~/.drirc（新建） --&gt;</span>
+
+<span class=nt>&lt;device</span> <span class=na>screen=</span><span class=s>&#34;0&#34;</span> <span class=na>driver=</span><span class=s>&#34;dri2&#34;</span><span class=nt>&gt;</span>
+  <span class=nt>&lt;application</span> <span class=na>name=</span><span class=s>&#34;Default&#34;</span><span class=nt>&gt;</span>
+    <span class=nt>&lt;option</span> <span class=na>name=</span><span class=s>&#34;vblank_mode&#34;</span> <span class=na>value=</span><span class=s>&#34;0&#34;</span><span class=nt>/&gt;</span>
+  <span class=nt>&lt;/application&gt;</span>
+<span class=nt>&lt;/device&gt;</span>
+</code></pre></div><p><a href=https://wiki.archlinux.org/index.php/Intel_graphics#Troubleshooting target=_blank rel=noopener>https://wiki.archlinux.org/index.php/Intel_graphics#Troubleshooting</a></p><p>2）显卡的配置：</p><pre><code class=language-conf data-lang=conf>; 文件位置：/etc/X11/xorg.conf.d/20-radeon.conf（新建）
+
+Section &quot;Device&quot;
+  Identifier  &quot;radeon&quot;
+  Driver &quot;radeon&quot;
+  Option &quot;AccelMethod&quot; &quot;glamor&quot;
+        Option &quot;DRI&quot; &quot;3&quot;
+        Option &quot;TearFree&quot; &quot;on&quot;
+        Option &quot;ColorTiling&quot; &quot;on&quot;
+        Option &quot;ColorTiling2D&quot; &quot;on&quot;
+EndSection
+</code></pre><p><a href=https://wiki.archlinux.org/index.php/ATI#Performance_tuning target=_blank rel=noopener>https://wiki.archlinux.org/index.php/ATI#Performance_tuning</a></p><p>3）解决驱动问题时，一些有用的获取信息的命令：</p><ol><li>dmesg</li><li>lsusb</li><li>lspci</li><li>lsmod</li><li>sudo lspci -kv</li></ol><p>4）几个查看显卡信息的命令：</p><ol><li><code>lspci -nnk | grep "VGA\|'Kern'\|3D\|Display" -A2</code></li><li><code>xrandr --listproviders</code></li><li><code>sudo cat /sys/kernel/debug/vgaswitcheroo/switch</code></li></ol><p>5）几点提示：</p><ul><li>如果修改后重启黑屏，无法进入图形界面，可按下左 alt + f2/f3/f4/f5/f6 进入命令行界面修复。</li><li>如果在图形界面卡住，可按下左 ctrl + alt + f2/f3/f4/f5/f6 进入命令行界面重启。</li><li>如果不小心从图形界面进入了命令行界面，可按下左 alt + f7 回到图形界面。</li></ul><h3 id=ssd-优化><a href=#ssd-优化 class=anchor-link>#</a><a href=#contents:ssd-优化 class=headings>SSD 优化</a></h3><p>减少系统对固态硬盘的读写，提高固态硬盘的使用寿命。</p><h4 id=开启-trim><a href=#开启-trim class=anchor-link>#</a><a href=#contents:开启-trim class=headings>开启 TRIM</a></h4><p>如果不支持，千万别用，否则可能会导致数据丢失！</p><p>先查看是否支持：</p><pre><code>$ lsblk --discard
+</code></pre><p>如果输出的 DISC-GRAN (discard granularity) 和 DISC-MAX (discard max bytes) 两列的值不为 <code>0</code>，则表明支持。</p><pre><code>$ sudo vim /etc/fstab
+</code></pre><p>添加 <code>noatime</code> 和 <code>discard</code>：</p><pre><code># /dev/sda1
+UUID=   /boot/efi   vfat      rw,noatime,discard  0 2
+
+# /dev/sda2
+UUID=   /           ext4      rw,noatime,discard  0 1
+
+# /dev/sdb
+UUID=   /home       ext4      rw,noatime,discard  0 2
+</code></pre><h4 id=更换-io-scheduler><a href=#更换-io-scheduler class=anchor-link>#</a><a href=#contents:更换-io-scheduler class=headings>更换 I/O scheduler</a></h4><pre><code>$ sudo vim /etc/default/grub
+</code></pre><p>找到下面这行，添加 <code>elevator=noop </code>：</p><pre><code>GRUB_CMDLINE_LINUX_DEFAULT=&quot;elevator=noop ...&quot;
+</code></pre><p>生成 GRUB 配置文件：</p><pre><code>$ sudo grub-mkconfig -o /boot/grub/grub.cfg
+</code></pre><h4 id=迁移高读写文件到-tmpfs><a href=#迁移高读写文件到-tmpfs class=anchor-link>#</a><a href=#contents:迁移高读写文件到-tmpfs class=headings>迁移高读写文件到 tmpfs</a></h4><pre><code>$ sudo vim /etc/fstab
+</code></pre><p>行尾添加：</p><pre><code>tmpfs /tmp      tmpfs defaults,noatime,mode=1777 0 0
+tmpfs /var/log  tmpfs defaults,noatime,mode=1777 0 0
+tmpfs /var/tmp  tmpfs defaults,noatime,mode=1777 0 0
+</code></pre><p>将 Google Chrome 的缓存挂载到 <code>/tmp</code>：</p><pre><code>$ cd ~/.cache/google-chrome/Default/ &amp;&amp; rm -rf Cache &amp;&amp; ln -sf /tmp Cache
+</code></pre><p>参考：</p><ol><li><a href=https://wiki.archlinux.org/index.php/Solid_state_drive target=_blank rel=noopener>https://wiki.archlinux.org/index.php/Solid_state_drive</a></li><li><a href=https://wiki.archlinux.org/index.php/Improving_performance target=_blank rel=noopener>https://wiki.archlinux.org/index.php/Improving_performance</a></li><li><a href=https://wiki.archlinux.org/index.php/Fstab#atime_options target=_blank rel=noopener>https://wiki.archlinux.org/index.php/Fstab#atime_options</a></li><li><a href=http://oenhan.com/linux-ssd-optimization target=_blank rel=noopener>http://oenhan.com/linux-ssd-optimization</a></li><li><a href=https://www.jianshu.com/p/nQpqsN target=_blank rel=noopener>https://www.jianshu.com/p/nQpqsN</a></li><li><a href=http://ju.outofmemory.cn/entry/235346 target=_blank rel=noopener>http://ju.outofmemory.cn/entry/235346</a></li></ol><h4 id=查看固态硬盘信息><a href=#查看固态硬盘信息 class=anchor-link>#</a><a href=#contents:查看固态硬盘信息 class=headings>查看固态硬盘信息</a></h4><pre><code>$ sudo pacman -S hdparm smartmontools
+$ sudo hdparm -I /dev/sda
+$ sudo smartctl -t short /dev/sda
+</code></pre><p>等待两分钟后，查看报告：</p><pre><code>$ sudo smartctl -l /dev/sda
+</code></pre><p>更多请自行查看 Wiki：</p><ol><li><a href=https://wiki.archlinux.org/index.php/S.M.A.R.T target=_blank rel=noopener>https://wiki.archlinux.org/index.php/S.M.A.R.T</a></li><li><a href=https://wiki.archlinux.org/index.php/hdparm target=_blank rel=noopener>https://wiki.archlinux.org/index.php/hdparm</a></li></ol><p>另外，也可以用 GNOME 自带的有图形界面的 Disks 查看硬盘的 SMART Data & Self-Tests。</p><h4 id=测试固态硬盘速度><a href=#测试固态硬盘速度 class=anchor-link>#</a><a href=#contents:测试固态硬盘速度 class=headings>测试固态硬盘速度</a></h4><p>1）dd</p><pre><code>$ sudo dd if=/dev/zero of=/tmp/test.img bs=1G count=1 oflag=dsync
+</code></pre><p>当然，要测试两块硬盘之间复制文件的速度，将 <code>of</code> 的目录更改为挂载在另一块硬盘的目录即可。</p><p>2）hdparm</p><pre><code>$ sudo hdparm -tT /dev/sda
+</code></pre><p><a href=https://wiki.archlinux.org/index.php/benchmarking target=_blank rel=noopener>https://wiki.archlinux.org/index.php/benchmarking</a></p><h2 id=现代桌面><a href=#现代桌面 class=anchor-link>#</a><a href=#contents:现代桌面 class=headings>现代桌面</a></h2><p>一个现代的桌面，不仅要有现代的 UI 和现代的 UX，还要有丰富易用的软件。</p><p>GNOME 各种主题的安装可暂时先查看<a href=/tech/make-linux-looks-like-macos/>这篇文章</a>（我目前的图标主题是 Papirus）。</p><h3 id=基本配置><a href=#基本配置 class=anchor-link>#</a><a href=#contents:基本配置 class=headings>基本配置</a></h3><p>GNOME 的电源设置，Settings > Power：</p><p><img src=/images/power.png alt=power.png></p><p>另外，Tweaks 关闭盖上盖子后休眠，Tweaks > General > Suspend when laptop lid is closed。</p><h3 id=软件安装><a href=#软件安装 class=anchor-link>#</a><a href=#contents:软件安装 class=headings>软件安装</a></h3><p>感谢开源，Linux 下诞生了各种各样的软件，且这些软件的安装，只需在终端中输入一行命令即可完成安装，快速便捷。</p><h4 id=必备工具><a href=#必备工具 class=anchor-link>#</a><a href=#contents:必备工具 class=headings>必备工具</a></h4><pre><code>$ sudo pacman -S git vim
+$ sudo pacman -S wget curl
+$ sudo pacman -S ntfs-3g exfat-utils p7zip unzip unrar
+</code></pre><div class=table-container><table><thead><tr><th style=text-align:center>名字</th><th style=text-align:center>说明</th><th style=text-align:center>必须？</th></tr></thead><tbody><tr><td style=text-align:center>git</td><td style=text-align:center>版本控制系统</td><td style=text-align:center>是</td></tr><tr><td style=text-align:center>vim</td><td style=text-align:center>一个会上瘾的编辑器</td><td style=text-align:center>否</td></tr><tr><td style=text-align:center>wget</td><td style=text-align:center>下载工具</td><td style=text-align:center>是</td></tr><tr><td style=text-align:center>curl</td><td style=text-align:center>下载工具</td><td style=text-align:center>是</td></tr><tr><td style=text-align:center>ntfs-3g</td><td style=text-align:center>Windows 的 NTFS 文件系统支持</td><td style=text-align:center>是</td></tr><tr><td style=text-align:center>exfat-utils</td><td style=text-align:center>exFAT 文件系统支持（U 盘）</td><td style=text-align:center>是</td></tr><tr><td style=text-align:center>p7zip unzip unrar</td><td style=text-align:center><code>.7z</code>、<code>.zip</code>、<code>.rar</code> 压缩文件格式支持</td><td style=text-align:center>是</td></tr></tbody></table></div><h4 id=yay><a href=#yay class=anchor-link>#</a><a href=#contents:yay class=headings>yay</a></h4><p>对于 Arch Linux，最具特色也是最强大的莫过于它丰富的 AUR (Arch User Repository)，而 yay 就是一个安装这个仓库的软件的便捷工具。</p><pre><code>$ git clone https://aur.archlinux.org/yay.git
+$ cd yay
+$ makepkg -si
+$ cd ..
+$ rm -rf yay
+</code></pre><h4 id=必备软件><a href=#必备软件 class=anchor-link>#</a><a href=#contents:必备软件 class=headings>必备软件</a></h4><p><img src=/images/gimp.png alt=gimp.png><span class=caption>◎ 使用 GIMP 编辑图片</span></p><p><img src=/images/kid3.png alt=kid3.png><span class=caption>◎ 使用 Kid3 编辑 .mp3 的元数据</span></p><div class=table-container><table><thead><tr><th style=text-align:center>名字</th><th style=text-align:center>说明</th><th style=text-align:center>类似</th></tr></thead><tbody><tr><td style=text-align:center>google-chrome</td><td style=text-align:center>Google Chrome 浏览器</td><td style=text-align:center>*</td></tr><tr><td style=text-align:center>visual-studio-code-bin</td><td style=text-align:center>Visual Studio Code</td><td style=text-align:center>*</td></tr><tr><td style=text-align:center>netease-cloud-music</td><td style=text-align:center>网易云音乐</td><td style=text-align:center>*</td></tr><tr><td style=text-align:center>Flameshot</td><td style=text-align:center>现代、快捷、轻便的截图工具</td><td style=text-align:center>*</td></tr><tr><td style=text-align:center>proxychains-ng</td><td style=text-align:center>终端内科学上网代理工具</td><td style=text-align:center>*</td></tr><tr><td style=text-align:center>redshift</td><td style=text-align:center>显示屏色温调节工具</td><td style=text-align:center>f.lux</td></tr><tr><td style=text-align:center>vlc</td><td style=text-align:center>强大的多媒体播放工具</td><td style=text-align:center>*</td></tr><tr><td style=text-align:center>deadbeef</td><td style=text-align:center>终极音频播放软件</td><td style=text-align:center>foobar2000</td></tr><tr><td style=text-align:center>telegram-desktop</td><td style=text-align:center>客户端开源的加密聊天工具</td><td style=text-align:center>*</td></tr><tr><td style=text-align:center>liferea</td><td style=text-align:center>RSS 阅读器</td><td style=text-align:center>*</td></tr><tr><td style=text-align:center>qbittorrent</td><td style=text-align:center>好用的 BT 下载工具</td><td style=text-align:center>*</td></tr><tr><td style=text-align:center>calibre</td><td style=text-align:center>电子书转换、编辑、阅读工具</td><td style=text-align:center>*</td></tr><tr><td style=text-align:center>gthumb</td><td style=text-align:center>图片浏览工具，可简单编辑图片，可清除照片元数据</td><td style=text-align:center>*</td></tr><tr><td style=text-align:center>libreoffice-fresh</td><td style=text-align:center>必备的办公软件</td><td style=text-align:center>Microsoft Office</td></tr><tr><td style=text-align:center>peek</td><td style=text-align:center>录制 GIF 动图</td><td style=text-align:center>*</td></tr><tr><td style=text-align:center>gimp</td><td style=text-align:center>强大的图片编辑工具</td><td style=text-align:center>Adobe Photoshop</td></tr><tr><td style=text-align:center>inkscape</td><td style=text-align:center>强大的矢量图形编辑软件</td><td style=text-align:center>Adobe Illustrator、CorelDraw</td></tr><tr><td style=text-align:center>shotcut</td><td style=text-align:center>强大的视频剪辑软件</td><td style=text-align:center>Adobe Premiere</td></tr><tr><td style=text-align:center>fontforge</td><td style=text-align:center>字体设计、编辑软件</td><td style=text-align:center>FontCreator</td></tr><tr><td style=text-align:center>audacity</td><td style=text-align:center>简单的音频编辑软件</td><td style=text-align:center>GoldWave</td></tr><tr><td style=text-align:center>kid3</td><td style=text-align:center>音频元数据编辑软件</td><td style=text-align:center>Mp3tag</td></tr><tr><td style=text-align:center>aria2</td><td style=text-align:center>强大的多线程下载工具</td><td style=text-align:center>*</td></tr><tr><td style=text-align:center>youtube-dl</td><td style=text-align:center>YouTube 视频下载工具</td><td style=text-align:center>*</td></tr><tr><td style=text-align:center>baidupcs-go-git</td><td style=text-align:center>百度网盘下载工具</td><td style=text-align:center>*</td></tr><tr><td style=text-align:center>ncmdump-go</td><td style=text-align:center>网易云音乐的 <code>.ncm</code> 格式转换工具</td><td style=text-align:center>*</td></tr></tbody></table></div><div class=highlight><pre class=chroma><code class=language-bash data-lang=bash>$ yay -S google-chrome visual-studio-code-bin netease-cloud-music proxychains-ng baidupcs-go-git ncmdump-go
+$ sudo pacman -S redshift vlc deadbeef telegram-desktop liferea qbittorrent calibre gthumb libreoffice-fresh peek gimp inkscape shotcut fontforge audacity kid3 aria2 youtube-dl flameshot
+</code></pre></div><p><a href=https://www.addictivetips.com/ubuntu-linux-tips/best-audio-tools-for-linux/ target=_blank rel=noopener>https://www.addictivetips.com/ubuntu-linux-tips/best-audio-tools-for-linux/</a></p><h3 id=软件配置><a href=#软件配置 class=anchor-link>#</a><a href=#contents:软件配置 class=headings>软件配置</a></h3><p>与 Windows 下的直接用图形界面配置不同，Linux 上的软件经常需要通过修改一些文件来配置。一开始可能会觉得头大，但经历几次后就会觉得并不麻烦，并能产生一些更深入的理解。</p><h4 id=redshift><a href=#redshift class=anchor-link>#</a><a href=#contents:redshift class=headings>Redshift</a></h4><p>这是一个非常棒的色温调节软件，即护眼模式。</p><p>1）新建配置文件：</p><pre><code>~ $ mkdir .config/redshift
+~ $ vim .config/redshift/redshift.conf
+</code></pre><p>加入：</p><pre><code>[redshift]
+location-provider=manual
+temp-day=5500
+temp-night=3700
+
+[manual]
+lat=48.853
+lon=2.349
+</code></pre><p>经纬的计算可以查看我的<a href=/tech/configure-redshift-in-linux/>这篇文章</a>。</p><p>2）添加自动启动。</p><p>Tweaks > Startup Applications > +</p><p>添加的是 redshift-gtk，更改为 redshift：</p><pre><code>$ sed -i 's/redshift-gtk/redshift/g' ~/.config/autostart/redshift-gtk.desktop
+</code></pre><p><a href=https://wiki.archlinux.org/index.php/redshift target=_blank rel=noopener>https://wiki.archlinux.org/index.php/redshift</a><br><a href=http://jonls.dk/redshift/ target=_blank rel=noopener>http://jonls.dk/redshift/</a></p><h4 id=flameshot><a href=#flameshot class=anchor-link>#</a><a href=#contents:flameshot class=headings>Flameshot</a></h4><p>可以配置下快捷键，使用起来更加快捷。去 Settings > Devices > Keyboard，然后下拉页面到底部，点击 <code>+</code> 号，Name 填 <code>Flameshot</code>，Command 填 <code>flameshot gui</code>，然后点击下 Shortcut 的右方方块，按下 <code>win</code> + <code>prt</code> 键，设置好后如下图。</p><p><img src=/images/flameshot.png alt=flameshot.png><span class=caption>◎ 快捷键设置</span></p><p>当然，你还可以在托盘右键设置一下，启用 Text 文字标注功能、设置文件命名规则、关闭托盘图标的显示（关闭后如需再配置：终端输入 <code>flameshot config</code> 即可）。另外，怎么更换注释的颜色呢？鼠标右键长按，然后移动选择即可。怎么修改工具的大小呢？鼠标滚轮滚动即可。交互非常人性、非常现代！</p><p><a href=https://itsfoss.com/take-screenshot-linux/ target=_blank rel=noopener>https://itsfoss.com/take-screenshot-linux/</a><br><a href=https://flameshot.js.org/#/key-bindings target=_blank rel=noopener>https://flameshot.js.org/#/key-bindings</a></p><h4 id=阿里云-oss-browser><a href=#阿里云-oss-browser class=anchor-link>#</a><a href=#contents:阿里云-oss-browser class=headings>阿里云 OSS Browser</a></h4><p>这个博客的图床是阿里云的 OSS，用 OSS Browser 可以方便地上传图片。</p><p>下载：<a href=https://github.com/aliyun/oss-browser target=_blank rel=noopener>https://github.com/aliyun/oss-browser</a></p><p>解压后放到一个固定文件夹，然后打开关闭。</p><p>添加启动文件：</p><pre><code>~ $ vim .local/share/applications/oss-browser.desktop
+</code></pre><pre><code>[Desktop Entry]
+Encoding=UTF-8
+Name=Oss Browser
+Exec=ossbrowser
+Icon=/home/archie/Documents/softwares/linux/oss-browser/resources/custom/icon.png
+Terminal=false
+Type=Application
+Categories=Development;
+</code></pre><p>在 Applications 菜单中找到打开或按下 <code>alt</code> 左边的键找到打开后，Dash/Dock 右键 Add to Favarites 即可。</p><p><a href=https://bbs.aliyun.com/read/569655.html target=_blank rel=noopener>https://bbs.aliyun.com/read/569655.html</a></p><h4 id=proxychains-ng><a href=#proxychains-ng class=anchor-link>#</a><a href=#contents:proxychains-ng class=headings>ProxyChains-NG</a></h4><pre><code>$ sudo vim /etc/proxychains.conf
+</code></pre><p>文件末尾，编辑如下：</p><div class=highlight><pre class=chroma><code class=language-diff data-lang=diff><span class=gd>- socks4 	127.0.0.1 	9050
+</span><span class=gd></span><span class=gi>+ socks5 	127.0.0.1 	9050
+</span></code></pre></div><p>然后，在命令前加上 <code>proxychains</code> 即可，如：</p><pre><code>$ proxychains wget google.com &amp;&amp; rm index.html
+</code></pre><h4 id=卸载软件><a href=#卸载软件 class=anchor-link>#</a><a href=#contents:卸载软件 class=headings>卸载软件</a></h4><p>GNOME 有时可能会自动运行一些占 CPU 和 内存的服务，用不着，故卸载。</p><pre><code>$ sudo pacman -Rs gnome-software gnome-calendar gnome-documents gnome-todo gnome-maps gnome-contacts evolution
+</code></pre><p>其中，卸载 gnome-calender 是因为它依赖 Evolution，而 Evolution 有自动运行的进程，gnome-calender 也用不着，故一同卸载。</p><p>另外，还有叫 <a href=https://wiki.gnome.org/Projects/Tracker target=_blank rel=noopener>Tracker</a> 的，它是个 GNOME 的文件索引生成软件，这样搜索时会更快，不该卸载。</p><h3 id=安装字体><a href=#安装字体 class=anchor-link>#</a><a href=#contents:安装字体 class=headings>安装字体</a></h3><p>字体是最影响阅读体验的一方面，而它的重要性却常常被忽视。</p><pre><code>$ sudo pacman -S ttf-dejavu ttf-liberation ttf-roboto ttf-inconsolata ttf-linux-libertine ttf-droid noto-fonts noto-fonts-extra noto-fonts-emoji noto-fonts-cjk adobe-source-han-sans-cn-fonts adobe-source-han-serif-cn-fonts
+$ yay -S otf-eb-garamond ttf-monaco otf-san-francisco consolas-font
+</code></pre><p>Adobe Garamond：<a href=https://fontlot.com/15206/adobe-garamond/ target=_blank rel=noopener>https://fontlot.com/15206/adobe-garamond/</a></p><p>Menlo：<a href=https://github.com/ueaner/fonts target=_blank rel=noopener>https://github.com/ueaner/fonts</a></p><p>最后，请务必安装 STShusong、STFangsong、STKaiti，自行搜索下载相应的 <code>ttf</code> 文件。安装很简单，下载后，GNOME 下鼠标左键单击即可安装。另：</p><ul><li>命令行安装的字体所在的目录：<code>/usr/share/fonts/</code></li><li>手动安装的字体所在的目录：<code>~/.local/share/fonts/</code></li></ul><h3 id=配置字体><a href=#配置字体 class=anchor-link>#</a><a href=#contents:配置字体 class=headings>配置字体</a></h3><p>字体的选择是非常重要的，选择一个好字体，能够极大地提高效率。</p><pre><code>$ mkdir ~/.config/fontconfig
+$ vim ~/.config/fontconfig/fonts.conf
+</code></pre><p>加入：</p><div class=highlight><pre class=chroma><code class=language-xml data-lang=xml><span class=cp>&lt;?xml version=&#39;1.0&#39;?&gt;</span>
+<span class=cp>&lt;!DOCTYPE fontconfig SYSTEM &#39;fonts.dtd&#39;&gt;</span>
+<span class=nt>&lt;fontconfig&gt;</span>
+
+  <span class=nt>&lt;alias&gt;</span>
+    <span class=nt>&lt;family&gt;</span>sans-serif<span class=nt>&lt;/family&gt;</span>
+    <span class=nt>&lt;prefer&gt;</span>
+      <span class=nt>&lt;family&gt;</span>Linux Biolinum O<span class=nt>&lt;/family&gt;</span>
+      <span class=nt>&lt;family&gt;</span>STShusong<span class=nt>&lt;/family&gt;</span>
+      <span class=nt>&lt;family&gt;</span>Source Han Serif CN<span class=nt>&lt;/family&gt;</span>
+      <span class=nt>&lt;family&gt;</span>Source Han Sans CN<span class=nt>&lt;/family&gt;</span>
+      <span class=nt>&lt;family&gt;</span>Noto Sans CJK TC<span class=nt>&lt;/family&gt;</span>
+      <span class=nt>&lt;family&gt;</span>Noto Sans CJK JP<span class=nt>&lt;/family&gt;</span>
+      <span class=nt>&lt;family&gt;</span>Noto Sans CJK KR<span class=nt>&lt;/family&gt;</span>
+      <span class=nt>&lt;family&gt;</span>Noto Sans<span class=nt>&lt;/family&gt;</span>
+      <span class=nt>&lt;family&gt;</span>Noto Color Emoji<span class=nt>&lt;/family&gt;</span>
+    <span class=nt>&lt;/prefer&gt;</span>
+  <span class=nt>&lt;/alias&gt;</span>
+
+  <span class=nt>&lt;alias&gt;</span>
+    <span class=nt>&lt;family&gt;</span>serif<span class=nt>&lt;/family&gt;</span>
+    <span class=nt>&lt;prefer&gt;</span>
+      <span class=nt>&lt;family&gt;</span>Adobe Garamond<span class=nt>&lt;/family&gt;</span>
+      <span class=nt>&lt;family&gt;</span>STShusong<span class=nt>&lt;/family&gt;</span>
+      <span class=nt>&lt;family&gt;</span>Source Han Serif CN<span class=nt>&lt;/family&gt;</span>
+      <span class=nt>&lt;family&gt;</span>Noto Serif CJK TC<span class=nt>&lt;/family&gt;</span>
+      <span class=nt>&lt;family&gt;</span>Noto Serif CJK JP<span class=nt>&lt;/family&gt;</span>
+      <span class=nt>&lt;family&gt;</span>Noto Serif CJK KR<span class=nt>&lt;/family&gt;</span>
+      <span class=nt>&lt;family&gt;</span>Noto Serif<span class=nt>&lt;/family&gt;</span>
+      <span class=nt>&lt;family&gt;</span>Noto Color Emoji<span class=nt>&lt;/family&gt;</span>
+    <span class=nt>&lt;/prefer&gt;</span>
+  <span class=nt>&lt;/alias&gt;</span>
+
+  <span class=nt>&lt;alias&gt;</span>
+    <span class=nt>&lt;family&gt;</span>monospace<span class=nt>&lt;/family&gt;</span>
+    <span class=nt>&lt;prefer&gt;</span>
+      <span class=nt>&lt;family&gt;</span>Menlo<span class=nt>&lt;/family&gt;</span>
+      <span class=nt>&lt;family&gt;</span>STShusong<span class=nt>&lt;/family&gt;</span>
+      <span class=nt>&lt;family&gt;</span>Source Han Serif CN<span class=nt>&lt;/family&gt;</span>
+      <span class=nt>&lt;family&gt;</span>Source Han Sans CN<span class=nt>&lt;/family&gt;</span>
+      <span class=nt>&lt;family&gt;</span>Noto Sans CJK TC<span class=nt>&lt;/family&gt;</span>
+      <span class=nt>&lt;family&gt;</span>Noto Sans CJK JP<span class=nt>&lt;/family&gt;</span>
+      <span class=nt>&lt;family&gt;</span>Noto Sans CJK KR<span class=nt>&lt;/family&gt;</span>
+      <span class=nt>&lt;family&gt;</span>Noto Sans<span class=nt>&lt;/family&gt;</span>
+      <span class=nt>&lt;family&gt;</span>Noto Color Emoji<span class=nt>&lt;/family&gt;</span>
+    <span class=nt>&lt;/prefer&gt;</span>
+  <span class=nt>&lt;/alias&gt;</span>
+
+  <span class=nt>&lt;dir&gt;</span>~/.local/share/fonts<span class=nt>&lt;/dir&gt;</span>
+<span class=nt>&lt;/fontconfig&gt;</span>
+</code></pre></div><p>更新字体缓存以生效（部分软件需重启软件才能生效）：</p><pre><code>$ fc-cache -fv
+</code></pre><p>当然，上面是我的个人配置，可依个人审美自行修改。</p><p>另，附上我的 Tweaks 的配置：</p><p><img src=/images/tweaks-fonts.png alt=tweaks-fonts.png></p><p>以及我的 Google Chrome 的配置：</p><div class=table-container><table><thead><tr><th style=text-align:center>选项</th><th style=text-align:center>配置</th></tr></thead><tbody><tr><td style=text-align:center>Font size</td><td style=text-align:center>18</td></tr><tr><td style=text-align:center>Standard font</td><td style=text-align:center>Linux Biolinum O</td></tr><tr><td style=text-align:center>Serif font</td><td style=text-align:center>Adobe Garamond</td></tr><tr><td style=text-align:center>Sans-serif font</td><td style=text-align:center>Linux Biolinum O</td></tr><tr><td style=text-align:center>Fixed-width font</td><td style=text-align:center>Menlo</td></tr></tbody></table></div><p><img src=/images/arch-wiki-english.png alt=arch-wiki-english.png><span class=caption>◎ 按以上配置的英文 Arch Wiki 页面显示效果</span></p><p><img src=/images/arch-wiki-chinese.png alt=arch-wiki-chinese.png><span class=caption>◎ 按以上配置的中文 Arch Wiki 页面显示效果</span></p><p><a href=https://wiki.archlinux.org/index.php/Fonts target=_blank rel=noopener>https://wiki.archlinux.org/index.php/Fonts</a><br><a href=https://www.freedesktop.org/software/fontconfig/fontconfig-user.html target=_blank rel=noopener>https://www.freedesktop.org/software/fontconfig/fontconfig-user.html</a><br><a href=https://wiki.archlinux.org/index.php/Font_configuration target=_blank rel=noopener>https://wiki.archlinux.org/index.php/Font_configuration</a></p><h3 id=透明终端><a href=#透明终端 class=anchor-link>#</a><a href=#contents:透明终端 class=headings>透明终端</a></h3><pre><code>$ yay -S gnome-terminal-transparency
+</code></pre><h3 id=颜色配置><a href=#颜色配置 class=anchor-link>#</a><a href=#contents:颜色配置 class=headings>颜色配置</a></h3><p>一些必要的色彩区分能够极大提高效率。</p><h4 id=终端颜色bash><a href=#终端颜色bash class=anchor-link>#</a><a href=#contents:终端颜色bash class=headings>终端颜色（Bash）</a></h4><p>先备份文件：</p><pre><code>$ sudo cp /etc/bash.bashrc /etc/bash.bashrc.backup
+</code></pre><p>然后新建：</p><pre><code>$ sudo vim /etc/bash.bashrc
+</code></pre><div class=highlight><pre class=chroma><code class=language-bash data-lang=bash><span class=c1># /etc/bash.bashrc</span>
+<span class=c1>#</span>
+<span class=c1># https://wiki.archlinux.org/index.php/Color_Bash_Prompt</span>
+<span class=c1>#</span>
+<span class=c1># This file is sourced by all *interactive* bash shells on startup,</span>
+<span class=c1># including some apparently interactive shells such as scp and rcp</span>
+<span class=c1># that can&#39;t tolerate any output. So make sure this doesn&#39;t display</span>
+<span class=c1># anything or bad things will happen !</span>
+
+<span class=c1># Test for an interactive shell. There is no need to set anything</span>
+<span class=c1># past this point for scp and rcp, and it&#39;s important to refrain from</span>
+<span class=c1># outputting anything in those cases.</span>
+
+<span class=c1># If not running interactively, don&#39;t do anything!</span>
+<span class=o>[[</span> <span class=nv>$-</span> !<span class=o>=</span> *i* <span class=o>]]</span> <span class=o>&amp;&amp;</span> <span class=k>return</span>
+
+<span class=c1># Bash won&#39;t get SIGWINCH if another process is in the foreground.</span>
+<span class=c1># Enable checkwinsize so that bash will check the terminal size when</span>
+<span class=c1># it regains control.</span>
+<span class=c1># http://cnswww.cns.cwru.edu/~chet/bash/FAQ (E11)</span>
+<span class=nb>shopt</span> -s checkwinsize
+
+<span class=c1># Enable history appending instead of overwriting.</span>
+<span class=nb>shopt</span> -s histappend
+
+<span class=k>case</span> <span class=si>${</span><span class=nv>TERM</span><span class=si>}</span> in
+  xterm*<span class=p>|</span>rxvt*<span class=p>|</span>Eterm<span class=p>|</span>aterm<span class=p>|</span>kterm<span class=p>|</span>gnome*<span class=o>)</span>
+    <span class=nv>PROMPT_COMMAND</span><span class=o>=</span><span class=si>${</span><span class=nv>PROMPT_COMMAND</span><span class=p>:+</span><span class=nv>$PROMPT_COMMAND</span><span class=p>; </span><span class=si>}</span><span class=s1>&#39;printf &#34;\033]0;%s@%s:%s\007&#34; &#34;${USER}&#34; &#34;${HOSTNAME%%.*}&#34; &#34;${PWD/#$HOME/~}&#34;&#39;</span>
+    <span class=p>;;</span>
+  screen<span class=o>)</span>
+    <span class=nv>PROMPT_COMMAND</span><span class=o>=</span><span class=si>${</span><span class=nv>PROMPT_COMMAND</span><span class=p>:+</span><span class=nv>$PROMPT_COMMAND</span><span class=p>; </span><span class=si>}</span><span class=s1>&#39;printf &#34;\033_%s@%s:%s\033\\&#34; &#34;${USER}&#34; &#34;${HOSTNAME%%.*}&#34; &#34;${PWD/#$HOME/~}&#34;&#39;</span>
+    <span class=p>;;</span>
+<span class=k>esac</span>
+
+<span class=c1># fortune is a simple program that displays a pseudorandom message</span>
+<span class=c1># from a database of quotations at logon and/or logout.</span>
+<span class=c1># If you wish to use it, please install &#34;fortune-mod&#34; from the</span>
+<span class=c1># official repositories, then uncomment the following line:</span>
+
+<span class=c1># [[ &#34;$PS1&#34; ]] &amp;&amp; /usr/bin/fortune</span>
+
+<span class=c1># Set colorful PS1 only on colorful terminals.</span>
+<span class=c1># dircolors --print-database uses its own built-in database</span>
+<span class=c1># instead of using /etc/DIR_COLORS. Try to use the external file</span>
+<span class=c1># first to take advantage of user additions. Use internal bash</span>
+<span class=c1># globbing instead of external grep binary.</span>
+
+<span class=c1># sanitize TERM:</span>
+<span class=nv>safe_term</span><span class=o>=</span><span class=si>${</span><span class=nv>TERM</span><span class=p>//[^[:</span><span class=nv>alnum</span><span class=p>:]]/?</span><span class=si>}</span>
+<span class=nv>match_lhs</span><span class=o>=</span><span class=s2>&#34;&#34;</span>
+
+<span class=o>[[</span> -f ~/.dir_colors <span class=o>]]</span> <span class=o>&amp;&amp;</span> <span class=nv>match_lhs</span><span class=o>=</span><span class=s2>&#34;</span><span class=si>${</span><span class=nv>match_lhs</span><span class=si>}</span><span class=k>$(</span>&lt;~/.dir_colors<span class=k>)</span><span class=s2>&#34;</span>
+<span class=o>[[</span> -f /etc/DIR_COLORS <span class=o>]]</span> <span class=o>&amp;&amp;</span> <span class=nv>match_lhs</span><span class=o>=</span><span class=s2>&#34;</span><span class=si>${</span><span class=nv>match_lhs</span><span class=si>}</span><span class=k>$(</span>&lt;/etc/DIR_COLORS<span class=k>)</span><span class=s2>&#34;</span>
+<span class=o>[[</span> -z <span class=si>${</span><span class=nv>match_lhs</span><span class=si>}</span> <span class=o>]]</span> <span class=se>\
+</span><span class=se></span>  <span class=o>&amp;&amp;</span> <span class=nb>type</span> -P dircolors &gt;/dev/null <span class=se>\
+</span><span class=se></span>  <span class=o>&amp;&amp;</span> <span class=nv>match_lhs</span><span class=o>=</span><span class=k>$(</span>dircolors --print-database<span class=k>)</span>
+
+<span class=k>if</span> <span class=o>[[</span> <span class=s1>$&#39;\n&#39;</span><span class=si>${</span><span class=nv>match_lhs</span><span class=si>}</span> <span class=o>==</span> *<span class=s1>$&#39;\n&#39;</span><span class=s2>&#34;TERM &#34;</span><span class=si>${</span><span class=nv>safe_term</span><span class=si>}</span>* <span class=o>]]</span> <span class=p>;</span> <span class=k>then</span>
+  
+  <span class=c1># we have colors :-)</span>
+
+  <span class=c1># Enable colors for ls, etc. Prefer ~/.dir_colors</span>
+  <span class=k>if</span> <span class=nb>type</span> -P dircolors &gt;/dev/null <span class=p>;</span> <span class=k>then</span>
+    <span class=k>if</span> <span class=o>[[</span> -f ~/.dir_colors <span class=o>]]</span> <span class=p>;</span> <span class=k>then</span>
+      <span class=nb>eval</span> <span class=k>$(</span>dircolors -b ~/.dir_colors<span class=k>)</span>
+    <span class=k>elif</span> <span class=o>[[</span> -f /etc/DIR_COLORS <span class=o>]]</span> <span class=p>;</span> <span class=k>then</span>
+      <span class=nb>eval</span> <span class=k>$(</span>dircolors -b /etc/DIR_COLORS<span class=k>)</span>
+    <span class=k>fi</span>
+  <span class=k>fi</span>
+
+  <span class=nv>PS1</span><span class=o>=</span><span class=s2>&#34;</span><span class=k>$(if</span> <span class=o>[[</span> <span class=si>${</span><span class=nv>EUID</span><span class=si>}</span> <span class=o>==</span> <span class=m>0</span> <span class=o>]]</span><span class=p>;</span> <span class=k>then</span> <span class=nb>echo</span> <span class=s1>&#39;\[\033[01;31m\]\h&#39;</span><span class=p>;</span> <span class=k>else</span> <span class=nb>echo</span> <span class=s1>&#39;\[\033[01;32m\]\u@\h&#39;</span><span class=p>;</span> <span class=k>fi)</span><span class=s2>\[\033[01;34m\] \w \$([[ \$? != 0 ]] &amp;&amp; echo \&#34;\[\033[01;31m\]:(\[\033[01;34m\] \&#34;)\\</span>$<span class=s2>\[\033[00m\] &#34;</span>
+
+  <span class=c1># Use this other PS1 string if you want \W for root and \w for all other users:</span>
+  <span class=c1># PS1=&#34;$(if [[ ${EUID} == 0 ]]; then echo &#39;\[\033[01;31m\]\h\[\033[01;34m\] \W&#39;; else echo &#39;\[\033[01;32m\]\u@\h\[\033[01;34m\] \w&#39;; fi) \$([[ \$? != 0 ]] &amp;&amp; echo \&#34;\[\033[01;31m\]:(\[\033[01;34m\] \&#34;)\\$\[\033[00m\] &#34;</span>
+
+  <span class=nb>alias</span> <span class=nv>ls</span><span class=o>=</span><span class=s2>&#34;ls --color=auto&#34;</span>
+  <span class=nb>alias</span> <span class=nv>dir</span><span class=o>=</span><span class=s2>&#34;dir --color=auto&#34;</span>
+  <span class=nb>alias</span> <span class=nv>grep</span><span class=o>=</span><span class=s2>&#34;grep --color=auto&#34;</span>
+  <span class=nb>alias</span> <span class=nv>dmesg</span><span class=o>=</span><span class=s1>&#39;dmesg --color&#39;</span>
+
+  <span class=c1># Uncomment the &#34;Color&#34; line in /etc/pacman.conf instead of uncommenting the following line...!</span>
+
+  <span class=c1># alias pacman=&#34;pacman --color=auto&#34;</span>
+
+<span class=k>else</span>
+
+  <span class=c1># show root@ when we do not have colors</span>
+
+  <span class=nv>PS1</span><span class=o>=</span><span class=s2>&#34;\u@\h \w \$([[ \$? != 0 ]] &amp;&amp; echo \&#34;:( \&#34;)\$ &#34;</span>
+
+  <span class=c1># Use this other PS1 string if you want \W for root and \w for all other users:</span>
+  <span class=c1># PS1=&#34;\u@\h $(if [[ ${EUID} == 0 ]]; then echo &#39;\W&#39;; else echo &#39;\w&#39;; fi) \$([[ \$? != 0 ]] &amp;&amp; echo \&#34;:( \&#34;)\$ &#34;</span>
+
+<span class=k>fi</span>
+
+<span class=nv>PS2</span><span class=o>=</span><span class=s2>&#34;&gt; &#34;</span>
+<span class=nv>PS3</span><span class=o>=</span><span class=s2>&#34;&gt; &#34;</span>
+<span class=nv>PS4</span><span class=o>=</span><span class=s2>&#34;+ &#34;</span>
+
+<span class=c1># Try to keep environment pollution down, EPA loves us.</span>
+<span class=nb>unset</span> safe_term match_lhs
+
+<span class=c1># Try to enable the auto-completion (type: &#34;pacman -S bash-completion&#34; to install it).</span>
+<span class=o>[</span> -r /usr/share/bash-completion/bash_completion <span class=o>]</span> <span class=o>&amp;&amp;</span> . /usr/share/bash-completion/bash_completion
+
+<span class=c1># Try to enable the &#34;Command not found&#34; hook (&#34;pacman -S pkgfile&#34; to install it).</span>
+<span class=c1># See also: https://wiki.archlinux.org/index.php/Bash#The_.22command_not_found.22_hook</span>
+<span class=o>[</span> -r /usr/share/doc/pkgfile/command-not-found.bash <span class=o>]</span> <span class=o>&amp;&amp;</span> . /usr/share/doc/pkgfile/command-not-found.bash
+
+man<span class=o>()</span> <span class=o>{</span>
+    env <span class=nv>LESS_TERMCAP_mb</span><span class=o>=</span><span class=s1>$&#39;\E[01;31m&#39;</span> <span class=se>\
+</span><span class=se></span>    <span class=nv>LESS_TERMCAP_md</span><span class=o>=</span><span class=s1>$&#39;\E[01;38;5;74m&#39;</span> <span class=se>\
+</span><span class=se></span>    <span class=nv>LESS_TERMCAP_me</span><span class=o>=</span><span class=s1>$&#39;\E[0m&#39;</span> <span class=se>\
+</span><span class=se></span>    <span class=nv>LESS_TERMCAP_se</span><span class=o>=</span><span class=s1>$&#39;\E[0m&#39;</span> <span class=se>\
+</span><span class=se></span>    <span class=nv>LESS_TERMCAP_so</span><span class=o>=</span><span class=s1>$&#39;\E[38;5;246m&#39;</span> <span class=se>\
+</span><span class=se></span>    <span class=nv>LESS_TERMCAP_ue</span><span class=o>=</span><span class=s1>$&#39;\E[0m&#39;</span> <span class=se>\
+</span><span class=se></span>    <span class=nv>LESS_TERMCAP_us</span><span class=o>=</span><span class=s1>$&#39;\E[04;38;5;146m&#39;</span> <span class=se>\
+</span><span class=se></span>    man <span class=s2>&#34;</span><span class=nv>$@</span><span class=s2>&#34;</span>
+<span class=o>}</span>
+</code></pre></div><p>再新建：</p><pre><code>$ sudo vim /etc/DIR_COLORS
+</code></pre><div class=highlight><pre class=chroma><code class=language-bash data-lang=bash><span class=c1># Configuration file for the color ls utility</span>
+<span class=c1># This file goes in the /etc directory, and must be world readable.</span>
+<span class=c1># You can copy this file to .dir_colors in your $HOME directory to override</span>
+<span class=c1># the system defaults.</span>
+
+<span class=c1># COLOR needs one of these arguments: &#39;tty&#39; colorizes output to ttys, but not</span>
+<span class=c1># pipes. &#39;all&#39; adds color characters to all output. &#39;none&#39; shuts colorization</span>
+<span class=c1># off.</span>
+COLOR all
+
+<span class=c1># Extra command line options for ls go here.</span>
+<span class=c1># Basically these ones are:</span>
+<span class=c1>#  -F = show &#39;/&#39; for dirs, &#39;*&#39; for executables, etc.</span>
+<span class=c1>#  -T 0 = don&#39;t trust tab spacing when formatting ls output.</span>
+OPTIONS -F -T <span class=m>0</span>
+
+<span class=c1># Below, there should be one TERM entry for each termtype that is colorizable</span>
+TERM linux
+TERM console
+TERM con132x25
+TERM con132x30
+TERM con132x43
+TERM con132x60
+TERM con80x25
+TERM con80x28
+TERM con80x30
+TERM con80x43
+TERM con80x50
+TERM con80x60
+TERM xterm
+TERM xterm-color
+TERM xterm-256color
+TERM vt100
+TERM rxvt
+TERM rxvt-256color
+TERM rxvt-cygwin
+TERM rxvt-cygwin-native
+TERM rxvt-unicode
+TERM rxvt-unicode-256color
+TERM rxvt-unicode256
+TERM screen
+
+<span class=c1># EIGHTBIT, followed by &#39;1&#39; for on, &#39;0&#39; for off. (8-bit output)</span>
+EIGHTBIT <span class=m>1</span>
+
+<span class=c1># Below are the color init strings for the basic file types. A color init</span>
+<span class=c1># string consists of one or more of the following numeric codes:</span>
+<span class=c1># Attribute codes: </span>
+<span class=c1># 00=none 01=bold 04=underscore 05=blink 07=reverse 08=concealed</span>
+<span class=c1># Text color codes:</span>
+<span class=c1># 30=black 31=red 32=green 33=yellow 34=blue 35=magenta 36=cyan 37=white</span>
+<span class=c1># Background color codes:</span>
+<span class=c1># 40=black 41=red 42=green 43=yellow 44=blue 45=magenta 46=cyan 47=white</span>
+NORMAL <span class=m>00</span> <span class=c1># global default, although everything should be something.</span>
+FILE <span class=m>00</span>   <span class=c1># normal file</span>
+DIR 01<span class=p>;</span><span class=m>34</span>   <span class=c1># directory</span>
+LINK 01<span class=p>;</span><span class=m>36</span>  <span class=c1># symbolic link</span>
+FIFO 40<span class=p>;</span><span class=m>33</span>  <span class=c1># pipe</span>
+SOCK 01<span class=p>;</span><span class=m>35</span>  <span class=c1># socket</span>
+BLK 40<span class=p>;</span>33<span class=p>;</span><span class=m>01</span>  <span class=c1># block device driver</span>
+CHR 40<span class=p>;</span>33<span class=p>;</span><span class=m>01</span>  <span class=c1># character device driver</span>
+
+<span class=c1># This is for files with execute permission:</span>
+EXEC 01<span class=p>;</span><span class=m>32</span> 
+
+<span class=c1># List any file extensions like &#39;.gz&#39; or &#39;.tar&#39; that you would like ls</span>
+<span class=c1># to colorize below. Put the extension, a space, and the color init string.</span>
+<span class=c1># (and any comments you want to add after a &#39;#&#39;)</span>
+.cmd 01<span class=p>;</span><span class=m>32</span> <span class=c1># executables (bright green)</span>
+.exe 01<span class=p>;</span><span class=m>32</span>
+.com 01<span class=p>;</span><span class=m>32</span>
+.btm 01<span class=p>;</span><span class=m>32</span>
+.bat 01<span class=p>;</span><span class=m>32</span>
+.tar 01<span class=p>;</span><span class=m>31</span> <span class=c1># archives or compressed (bright red)</span>
+.tgz 01<span class=p>;</span><span class=m>31</span>
+.arj 01<span class=p>;</span><span class=m>31</span>
+.taz 01<span class=p>;</span><span class=m>31</span>
+.lzh 01<span class=p>;</span><span class=m>31</span>
+.zip 01<span class=p>;</span><span class=m>31</span>
+.z   01<span class=p>;</span><span class=m>31</span>
+.Z   01<span class=p>;</span><span class=m>31</span>
+.gz  01<span class=p>;</span><span class=m>31</span>
+.jpg 01<span class=p>;</span><span class=m>35</span> <span class=c1># image formats</span>
+.gif 01<span class=p>;</span><span class=m>35</span>
+.bmp 01<span class=p>;</span><span class=m>35</span>
+.xbm 01<span class=p>;</span><span class=m>35</span>
+.xpm 01<span class=p>;</span><span class=m>35</span>
+.tif 01<span class=p>;</span><span class=m>35</span>
+</code></pre></div><p>保存后重启终端即可见效果。</p><p><a href="https://www.youtube.com/watch?v=giAb4Ckh8BQ" target=_blank rel=noopener>https://www.youtube.com/watch?v=giAb4Ckh8BQ</a></p><h4 id=pacman-的颜色><a href=#pacman-的颜色 class=anchor-link>#</a><a href=#contents:pacman-的颜色 class=headings>Pacman 的颜色</a></h4><pre><code>$ sudo sed -i 's/#Color/Color/g' /etc/pacman.conf
+</code></pre><h3 id=游戏游戏><a href=#游戏游戏 class=anchor-link>#</a><a href=#contents:游戏游戏 class=headings>游戏游戏</a></h3><p>Linux 下也能玩游戏！</p><p><img src=/images/dota2.png alt=dota2.png><span class=caption>◎ 在 Arch Linux 上玩 Dota2</span></p><p><a href=https://wiki.archlinux.org/index.php/Gaming target=_blank rel=noopener>https://wiki.archlinux.org/index.php/Gaming</a><br><a href=https://itsfoss.com/free-linux-games/ target=_blank rel=noopener>https://itsfoss.com/free-linux-games/</a><br><a href=https://www.gamingonlinux.com/ target=_blank rel=noopener>https://www.gamingonlinux.com/</a></p><h4 id=原生><a href=#原生 class=anchor-link>#</a><a href=#contents:原生 class=headings>原生</a></h4><p>1）Urban Terror</p><p>类似 CS 的第一人称射击类游戏。</p><pre><code>$ yay -S urbanterror
+</code></pre><p>2）Xonotic</p><p>有毒的第一人称射击类游戏。</p><pre><code>$ sudo pacman -S xonotic
+</code></pre><p><img src=/images/xonotic-1.jpg alt=xonotic-1.jpg><span class=caption>◎ 联机时网络延迟过高，跟老外说再见</span></p><p><img src=/images/xonotic-2.jpg alt=xonotic-2.jpg><span class=caption>◎ 单机 15 杀</span></p><p>3）Super Tux Kart</p><p>有故事的飞车类游戏。</p><pre><code>$ sudo pacman -S supertuxkart
+</code></pre><h4 id=steam><a href=#steam class=anchor-link>#</a><a href=#contents:steam class=headings>Steam</a></h4><p><img src=/images/steam.png alt=steam.png><span class=caption>◎ 运行在 Arch Linux 上的 Steam</span></p><p>添加源：</p><pre><code>$ sudo vim /etc/pacman.conf
+</code></pre><p>删除下面两行的 <code>#</code> 注释符：</p><pre><code>[multilib]
+Include = /etc/pacman.d/mirrorlist
+</code></pre><p>安装：</p><pre><code>$ sudo pacman -Syu
+$ sudo pacman -S steam steam-native-runtime
+</code></pre><p>选择 Steam (Native) 启动，建议运行测试版，及时体验最新功能。在菜单栏 Steam > Settings > Account > Beta participation 开启后保存即可。</p><p>目前 Steam 也有一些原生支持的游戏，可玩的有：</p><ol><li>Dota2</li><li>Counter-Strike</li><li>Star Conflict</li><li>Tank Force</li><li>AV-17</li></ol><p>此外，今年八月，Linux 下的 Steam 支持使用 Steam Play 来玩 Windows 下的游戏，设置中勾选 Proton 即可。</p><p><img src=/images/steam-proton.png alt=steam-proton.png><span class=caption>◎ Steam Play 设置</span></p><p>但是，目前并不是每个游戏都能支持，比如吃鸡就不行。</p><p>支持状态可看：<a href=https://www.protondb.com/ target=_blank rel=noopener>https://www.protondb.com/</a></p><p><a href=https://wiki.archlinux.org/index.php/Steam target=_blank rel=noopener>https://wiki.archlinux.org/index.php/Steam</a><br><a href=https://wiki.archlinux.org/index.php/Official_repositories#multilib target=_blank rel=noopener>https://wiki.archlinux.org/index.php/Official_repositories#multilib</a><br><a href=https://www.reddit.com/r/archlinux/comments/8dgj8e/steam_is_missing_multipile_32bit_libraries/ target=_blank rel=noopener>https://www.reddit.com/r/archlinux/comments/8dgj8e/steam_is_missing_multipile_32bit_libraries/</a></p><h4 id=lutris><a href=#lutris class=anchor-link>#</a><a href=#contents:lutris class=headings>Lutris</a></h4><p>一个游戏管理软件，也提供 Linux 下游戏的解决方案，如：Fortnite、League of Legends、World of Warcraft、Overwatch 等等。</p><pre><code>$ sudo pacman -S lutris
+</code></pre><p><a href=https://lutris.net/games target=_blank rel=noopener>https://lutris.net/games</a></p><h3 id=启动界面><a href=#启动界面 class=anchor-link>#</a><a href=#contents:启动界面 class=headings>启动界面</a></h3><p>开机不仅要快，还要好看，还要够 Cool～</p><h4 id=更换-lightdm-的主题><a href=#更换-lightdm-的主题 class=anchor-link>#</a><a href=#contents:更换-lightdm-的主题 class=headings>更换 LightDM 的主题</a></h4><p><img src=/images/lightdm-material.jpg alt=lightdm-material.jpg><span class=caption>◎ 开机登录界面</span></p><pre><code>$ sudo pacman -S lightdm-webkit2-greeter
+$ yay -S lightdm-webkit2-theme-material2
+</code></pre><p>编辑文件：</p><pre><code>$ sudo vim /etc/lightdm/lightdm.conf
+</code></pre><p>找到下面这行，更改为：</p><div class=highlight><pre class=chroma><code class=language-diff data-lang=diff><span class=gd>-#greeter-session=example-gtk-gnome
+</span><span class=gd></span><span class=gi>+greeter-session=lightdm-webkit2-greeter
+</span></code></pre></div><p>编辑文件：</p><pre><code>$ sudo vim /etc/lightdm/lightdm-webkit2-greeter.conf
+</code></pre><p>找到下面这行，更改为：</p><div class=highlight><pre class=chroma><code class=language-diff data-lang=diff>[greeter]
+<span class=gd>-  webkit_theme        = antergos
+</span><span class=gd></span><span class=gi>+  webkit_theme        = material2
+</span></code></pre></div><p><a href=https://github.com/FallingSnow/lightdm-webkit2-material2/wiki/Installation target=_blank rel=noopener>https://github.com/FallingSnow/lightdm-webkit2-material2/wiki/Installation</a><br><a href=https://wiki.archlinux.org/index.php/LightDM target=_blank rel=noopener>https://wiki.archlinux.org/index.php/LightDM</a></p><h4 id=隐藏-grub-除非按下-shift-键><a href=#隐藏-grub-除非按下-shift-键 class=anchor-link>#</a><a href=#contents:隐藏-grub-除非按下-shift-键 class=headings>隐藏 GRUB 除非按下 shift 键</a></h4><p>新建文件：</p><pre><code>$ sudo vim /etc/grub.d/31_hold_shift
+</code></pre><p>加入：</p><div class=highlight><pre class=chroma><code class=language-sh data-lang=sh><span class=c1># 来源：https://gist.githubusercontent.com/anonymous/8eb2019db2e278ba99be/raw/257f15100fd46aeeb8e33a7629b209d0a14b9975/gistfile1.sh</span>
+
+<span class=c1>#! /bin/sh</span>
+<span class=nb>set</span> -e
+
+<span class=nv>prefix</span><span class=o>=</span><span class=s2>&#34;/usr&#34;</span>
+<span class=nv>exec_prefix</span><span class=o>=</span><span class=s2>&#34;</span><span class=si>${</span><span class=nv>prefix</span><span class=si>}</span><span class=s2>&#34;</span>
+<span class=nv>datarootdir</span><span class=o>=</span><span class=s2>&#34;</span><span class=si>${</span><span class=nv>prefix</span><span class=si>}</span><span class=s2>/share&#34;</span>
+
+<span class=nb>export</span> <span class=nv>TEXTDOMAIN</span><span class=o>=</span>grub
+<span class=nb>export</span> <span class=nv>TEXTDOMAINDIR</span><span class=o>=</span><span class=s2>&#34;</span><span class=si>${</span><span class=nv>datarootdir</span><span class=si>}</span><span class=s2>/locale&#34;</span>
+<span class=nb>source</span> <span class=s2>&#34;</span><span class=si>${</span><span class=nv>datarootdir</span><span class=si>}</span><span class=s2>/grub/grub-mkconfig_lib&#34;</span>
+
+<span class=nv>found_other_os</span><span class=o>=</span>
+
+make_timeout <span class=o>()</span> <span class=o>{</span>
+
+  <span class=k>if</span> <span class=o>[</span> <span class=s2>&#34;x</span><span class=si>${</span><span class=nv>GRUB_FORCE_HIDDEN_MENU</span><span class=si>}</span><span class=s2>&#34;</span> <span class=o>=</span> <span class=s2>&#34;xtrue&#34;</span> <span class=o>]</span> <span class=p>;</span> <span class=k>then</span> 
+    <span class=k>if</span> <span class=o>[</span> <span class=s2>&#34;x</span><span class=si>${</span><span class=nv>1</span><span class=si>}</span><span class=s2>&#34;</span> !<span class=o>=</span> <span class=s2>&#34;x&#34;</span> <span class=o>]</span> <span class=p>;</span> <span class=k>then</span>
+      <span class=k>if</span> <span class=o>[</span> <span class=s2>&#34;x</span><span class=si>${</span><span class=nv>GRUB_HIDDEN_TIMEOUT_QUIET</span><span class=si>}</span><span class=s2>&#34;</span> <span class=o>=</span> <span class=s2>&#34;xtrue&#34;</span> <span class=o>]</span> <span class=p>;</span> <span class=k>then</span>
+    <span class=nv>verbose</span><span class=o>=</span>
+      <span class=k>else</span>
+    <span class=nv>verbose</span><span class=o>=</span><span class=s2>&#34; --verbose&#34;</span>
+      <span class=k>fi</span>
+
+      <span class=k>if</span> <span class=o>[</span> <span class=s2>&#34;x</span><span class=si>${</span><span class=nv>1</span><span class=si>}</span><span class=s2>&#34;</span> <span class=o>=</span> <span class=s2>&#34;x0&#34;</span> <span class=o>]</span> <span class=p>;</span> <span class=k>then</span>
+    cat <span class=s>&lt;&lt;EOF
+</span><span class=s>if [ &#34;x\${timeout}&#34; != &#34;x-1&#34; ]; then
+</span><span class=s>  if keystatus; then
+</span><span class=s>    if keystatus --shift; then
+</span><span class=s>      set timeout=-1
+</span><span class=s>    else
+</span><span class=s>      set timeout=0
+</span><span class=s>    fi
+</span><span class=s>  else
+</span><span class=s>    if sleep$verbose --interruptible 3 ; then
+</span><span class=s>      set timeout=0
+</span><span class=s>    fi
+</span><span class=s>  fi
+</span><span class=s>fi
+</span><span class=s>EOF</span>
+      <span class=k>else</span>
+    cat <span class=s>&lt;&lt; EOF
+</span><span class=s>if [ &#34;x\${timeout}&#34; != &#34;x-1&#34; ]; then
+</span><span class=s>  if sleep$verbose --interruptible ${GRUB_HIDDEN_TIMEOUT} ; then
+</span><span class=s>    set timeout=0
+</span><span class=s>  fi
+</span><span class=s>fi
+</span><span class=s>EOF</span>
+      <span class=k>fi</span>
+    <span class=k>fi</span>
+  <span class=k>fi</span>
+<span class=o>}</span>
+
+adjust_timeout <span class=o>()</span> <span class=o>{</span>
+  <span class=k>if</span> <span class=o>[</span> <span class=s2>&#34;x</span><span class=nv>$GRUB_BUTTON_CMOS_ADDRESS</span><span class=s2>&#34;</span> !<span class=o>=</span> <span class=s2>&#34;x&#34;</span> <span class=o>]</span><span class=p>;</span> <span class=k>then</span>
+    cat <span class=s>&lt;&lt;EOF
+</span><span class=s>if cmostest $GRUB_BUTTON_CMOS_ADDRESS ; then
+</span><span class=s>EOF</span>
+    make_timeout <span class=s2>&#34;</span><span class=si>${</span><span class=nv>GRUB_HIDDEN_TIMEOUT_BUTTON</span><span class=si>}</span><span class=s2>&#34;</span> <span class=s2>&#34;</span><span class=si>${</span><span class=nv>GRUB_TIMEOUT_BUTTON</span><span class=si>}</span><span class=s2>&#34;</span>
+    <span class=nb>echo</span> <span class=k>else</span>
+    make_timeout <span class=s2>&#34;</span><span class=si>${</span><span class=nv>GRUB_HIDDEN_TIMEOUT</span><span class=si>}</span><span class=s2>&#34;</span> <span class=s2>&#34;</span><span class=si>${</span><span class=nv>GRUB_TIMEOUT</span><span class=si>}</span><span class=s2>&#34;</span>
+    <span class=nb>echo</span> <span class=k>fi</span>
+  <span class=k>else</span>
+    make_timeout <span class=s2>&#34;</span><span class=si>${</span><span class=nv>GRUB_HIDDEN_TIMEOUT</span><span class=si>}</span><span class=s2>&#34;</span> <span class=s2>&#34;</span><span class=si>${</span><span class=nv>GRUB_TIMEOUT</span><span class=si>}</span><span class=s2>&#34;</span>
+  <span class=k>fi</span>
+<span class=o>}</span>
+
+  adjust_timeout
+
+    cat <span class=s>&lt;&lt;EOF
+</span><span class=s>if [ &#34;x\${timeout}&#34; != &#34;x-1&#34; ]; then
+</span><span class=s>  if keystatus; then
+</span><span class=s>    if keystatus --shift; then
+</span><span class=s>      set timeout=-1
+</span><span class=s>    else
+</span><span class=s>      set timeout=0
+</span><span class=s>    fi
+</span><span class=s>  else
+</span><span class=s>    if sleep$verbose --interruptible 3 ; then
+</span><span class=s>      set timeout=0
+</span><span class=s>    fi
+</span><span class=s>  fi
+</span><span class=s>fi
+</span><span class=s>EOF</span>
+</code></pre></div><p>保存后，添加可执行权限并编辑 GRUB：</p><pre><code>$ sudo chmod a+x /etc/grub.d/31_hold_shift
+$ sudo vim /etc/default/grub
+</code></pre><p>在最后加入一行：</p><pre><code>GRUB_FORCE_HIDDEN_MENU=&quot;true&quot;
+</code></pre><p>生成 GRUB 配置文件：</p><pre><code>$ sudo grub-mkconfig -o /boot/grub/grub.cfg
+</code></pre><p><a href=https://wiki.archlinux.org/index.php/GRUB/Tips_and_tricks#Hide_GRUB_unless_the_Shift_key_is_held_down target=_blank rel=noopener>https://wiki.archlinux.org/index.php/GRUB/Tips_and_tricks#Hide_GRUB_unless_the_Shift_key_is_held_down</a></p><h4 id=开关机显示内核输出信息><a href=#开关机显示内核输出信息 class=anchor-link>#</a><a href=#contents:开关机显示内核输出信息 class=headings>开关机显示内核输出信息</a></h4><pre><code>$ sudo vim /etc/default/grub
+</code></pre><p>更改为：</p><pre><code>GRUB_CMDLINE_LINUX_DEFAULT=&quot;... splash&quot;
+</code></pre><p>生成 GRUB 配置文件：</p><pre><code>$ sudo grub-mkconfig -o /boot/grub/grub.cfg
+</code></pre><h3 id=其它细节><a href=#其它细节 class=anchor-link>#</a><a href=#contents:其它细节 class=headings>其它细节</a></h3><p><img src=/images/fcitx-pinyin.png alt=fcitx-pinyin.png></p><ol><li>Gedit 的实用插件</li><li>更改 Fcitx Pinyin 的托盘图标</li><li>更改 Steam 的托盘图标</li><li>GNOME Shell Extensions 的配置</li></ol><p><a href=https://github.com/ValveSoftware/steam-for-linux/issues/3887 target=_blank rel=noopener>https://github.com/ValveSoftware/steam-for-linux/issues/3887</a></p><h2 id=参考资源><a href=#参考资源 class=anchor-link>#</a><a href=#contents:参考资源 class=headings>参考资源</a></h2><p>只要有 Google，一切软件问题皆可解决。</p><h3 id=视频><a href=#视频 class=anchor-link>#</a><a href=#contents:视频 class=headings>视频</a></h3><p><a href="https://www.youtube.com/watch?v=L1B1O0R1IHA" target=_blank rel=noopener>Dual Booting Windows 10 and Arch Linux on UEFI</a><br><a href="https://www.youtube.com/watch?v=4PBqpX0_UOc" target=_blank rel=noopener>Full Arch Linux Install (SAVAGE Edition!) | YouTube</a><br><a href="https://www.youtube.com/watch?v=nSHOb8YU9Gw" target=_blank rel=noopener>After a Minimal Linux Install: Graphical Envionment and Users | YouTube</a><br><a href="https://www.youtube.com/watch?v=dOXYZ8hKdmc" target=_blank rel=noopener>Arch Linux UEFI step-by-step installation guide | YouTube</a><br><a href="https://www.youtube.com/watch?v=jW4GFGOIUjc" target=_blank rel=noopener>10 Things to do first in Arch Linux | YouTube</a></p><h3 id=文章><a href=#文章 class=anchor-link>#</a><a href=#contents:文章 class=headings>文章</a></h3><p><a href=https://wiki.archlinux.org/index.php/Installation_guide target=_blank rel=noopener>https://wiki.archlinux.org/index.php/Installation_guide</a><br><a href=https://wiki.archlinux.org/index.php/General_recommendations target=_blank rel=noopener>https://wiki.archlinux.org/index.php/General_recommendations</a><br><a href=https://www.viseator.com/tags/Arch/ target=_blank rel=noopener>https://www.viseator.com/tags/Arch/</a><br><a href=https://github.com/typefo/blog/blob/master/linux/archlinux-install-guide-uefi.md target=_blank rel=noopener>https://github.com/typefo/blog/blob/master/linux/archlinux-install-guide-uefi.md</a><br><a href=https://blog.allenchou.cc/arch-linux-tutorial/ target=_blank rel=noopener>https://blog.allenchou.cc/arch-linux-tutorial/</a><br><a href=https://linux.cn/article-9170-1.html target=_blank rel=noopener>https://linux.cn/article-9170-1.html</a></p></div></article><div class=post-gitinfo><div class=post-gitinfo-left><div class="gitinfo-item commit"><a href=https://github.com/reuixiy/io-oi.me/commit/f3038dc44748dd4243b1e77e83bfe0ab8f0d9054 target=_blank rel=noopener><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" class="icon git-icon"><path d="M384 144c0-44.2-35.8-80-80-80s-80 35.8-80 80c0 36.4 24.3 67.1 57.5 76.8-.6 16.1-4.2 28.5-11 36.9-15.4 19.2-49.3 22.4-85.2 25.7-28.2 2.6-57.4 5.4-81.3 16.9v-144c32.5-10.2 56-40.5 56-76.3.0-44.2-35.8-80-80-80S0 35.8.0 80c0 35.8 23.5 66.1 56 76.3v199.3C23.5 365.9.0 396.2.0 432c0 44.2 35.8 80 80 80s80-35.8 80-80c0-34-21.2-63.1-51.2-74.6 3.1-5.2 7.8-9.8 14.9-13.4 16.2-8.2 40.4-10.4 66.1-12.8 42.2-3.9 90-8.4 118.2-43.4 14-17.4 21.1-39.8 21.6-67.9 31.6-10.8 54.4-40.7 54.4-75.9zM80 64c8.8.0 16 7.2 16 16s-7.2 16-16 16-16-7.2-16-16 7.2-16 16-16zm0 384c-8.8.0-16-7.2-16-16s7.2-16 16-16 16 7.2 16 16-7.2 16-16 16zm224-320c8.8.0 16 7.2 16 16s-7.2 16-16 16-16-7.2-16-16 7.2-16 16-16z"/></svg>f3038dc</a></div><div class="gitinfo-item commit-msg"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 512" class="icon msg-icon"><path d="M20 424.229h20V279.771H20c-11.046.0-20-8.954-20-20V212c0-11.046 8.954-20 20-20h112c11.046.0 20 8.954 20 20v212.229h20c11.046.0 20 8.954 20 20V492c0 11.046-8.954 20-20 20H20c-11.046.0-20-8.954-20-20v-47.771c0-11.046 8.954-20 20-20zM96 0C56.235.0 24 32.235 24 72s32.235 72 72 72 72-32.235 72-72S135.764.0 96 0z"/></svg>删除：Sublime Text 相关的内容</div></div><div class=post-gitinfo-right><div class="gitinfo-item feedback"><a href=https://github.com/reuixiy/io-oi.me/issues target=_blank rel=noopener><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" class="icon feedback-icon"><path d="M202.021.0C122.202.0 70.503 32.703 29.914 91.026c-7.363 10.58-5.093 25.086 5.178 32.874l43.138 32.709c10.373 7.865 25.132 6.026 33.253-4.148 25.049-31.381 43.63-49.449 82.757-49.449 30.764.0 68.816 19.799 68.816 49.631.0 22.552-18.617 34.134-48.993 51.164-35.423 19.86-82.299 44.576-82.299 106.405V320c0 13.255 10.745 24 24 24h72.471c13.255.0 24-10.745 24-24v-5.773c0-42.86 125.268-44.645 125.268-160.627C377.504 66.256 286.902.0 202.021.0zM192 373.459c-38.196.0-69.271 31.075-69.271 69.271.0 38.195 31.075 69.27 69.271 69.27s69.271-31.075 69.271-69.271-31.075-69.27-69.271-69.27z"/></svg>Feedback</a></div><div class="gitinfo-item edit"><a href=https://github.com/reuixiy/io-oi.me/blob/master/content/zh/tech/Hello,%20Arch%20Linux!.md target=_blank rel=noopener><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" class="icon edit-icon"><path d="M402.3 344.9l32-32c5-5 13.7-1.5 13.7 5.7V464c0 26.5-21.5 48-48 48H48c-26.5.0-48-21.5-48-48V112c0-26.5 21.5-48 48-48h273.5c7.1.0 10.7 8.6 5.7 13.7l-32 32c-1.5 1.5-3.5 2.3-5.7 2.3H48v352h352V350.5c0-2.1.8-4.1 2.3-5.6zm156.6-201.8L296.3 405.7l-90.4 10c-26.2 2.9-48.5-19.2-45.6-45.6l10-90.4L432.9 17.1c22.9-22.9 59.9-22.9 82.7.0l43.2 43.2c22.9 22.9 22.9 60 .1 82.8zM460.1 174 402 115.9 216.2 301.8l-7.3 65.3 65.3-7.3L460.1 174zm64.8-79.7-43.2-43.2c-4.1-4.1-10.8-4.1-14.8.0L436 82l58.1 58.1 30.9-30.9c4-4.2 4-10.8-.1-14.9z"/></svg>Edit Me?</a></div></div></div><footer class=minimal-footer><div class=post-tag><a href=/tags/linux/ rel=tag class=post-tag-link>#linux</a></div><div class=post-category><a href=/tech/ class="post-category-link active">tech</a> | <a href=/life/ class=post-category-link>life</a></div></footer></div></main></div><script>'serviceWorker'in navigator&&window.addEventListener('load',function(){navigator.serviceWorker.register('/sw.js')})</script><script src=/js/medium-zoom.min.js></script><script>mediumZoom(document.querySelectorAll('div.post-body img'),{background:'hsla(var(--color-bg-h), var(--color-bg-s), var(--color-bg-l), 0.95)'})</script></body></html>

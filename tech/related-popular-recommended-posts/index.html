@@ -1,0 +1,146 @@
+<!doctype html><html lang=zh-cn><head prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#"><meta charset=utf-8><meta name=generator content="Hugo 0.85.0"><meta name=theme-color content="#fff"><meta name=viewport content="width=device-width,initial-scale=1"><meta name=format-detection content="telephone=no, date=no, address=no, email=no"><meta http-equiv=cache-control content="no-transform"><meta http-equiv=cache-control content="no-siteapp"><title>为 NexT 添加相关╱热门╱推荐文章 | reuixiy</title><link rel=stylesheet href=/css/meme.min.css><script src=/js/meme.min.js></script><link rel=preconnect href=https://fonts.gstatic.com crossorigin><link rel=stylesheet href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;700&family=Source+Code+Pro:ital,wght@0,400;0,700;1,400;1,700&family=Cinzel+Decorative:wght@700&display=swap" media=print onload="this.media='all'"><noscript><link rel=stylesheet href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;700&family=Source+Code+Pro:ital,wght@0,400;0,700;1,400;1,700&family=Cinzel+Decorative:wght@700&display=swap"></noscript><meta name=author content="reuixiy"><meta name=description content="本文主要针对下面两个 Hexo 插件的一些配置难点和个人定制，至于两个插件的安装和基础配置，略……"><link rel="shortcut icon" href=/favicon.ico type=image/x-icon><link rel=mask-icon href=/icons/safari-pinned-tab.svg color=#2a6df4><link rel=apple-touch-icon sizes=180x180 href=/icons/apple-touch-icon.png><meta name=apple-mobile-web-app-capable content="yes"><meta name=apple-mobile-web-app-title content="reuixiy"><meta name=apple-mobile-web-app-status-bar-style content="black"><meta name=mobile-web-app-capable content="yes"><meta name=application-name content="reuixiy"><meta name=msapplication-starturl content="../../"><meta name=msapplication-TileColor content="#fff"><meta name=msapplication-TileImage content="../../icons/mstile-150x150.png"><link rel=manifest href=/manifest.json><link rel=canonical href=https://io-oi.me/tech/related-popular-recommended-posts/><script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","datePublished":"2018-05-09T15:41:07+08:00","dateModified":"2019-08-20T14:00:19+08:00","url":"https://io-oi.me/tech/related-popular-recommended-posts/","headline":"为 NexT 添加相关╱热门╱推荐文章","description":"本文主要针对下面两个 Hexo 插件的一些配置难点和个人定制，至于两个插件的安装和基础配置，略……","inLanguage":"zh-CN","articleSection":"tech","wordCount":2221,"image":["https://io-oi.me/images/hexo-next-optimization-4.jpg","https://io-oi.me/images/hexo-next-optimization-5.jpg","https://io-oi.me/images/hexo-next-optimization-6.jpg","https://io-oi.me/images/hexo-next-optimization-7.jpg","https://io-oi.me/images/hexo-next-optimization-8.jpg","https://io-oi.me/images/hexo-next-optimization-9.jpg","https://io-oi.me/images/hexo-next-optimization-10.jpg","https://io-oi.me/images/hexo-next-optimization-11.jpg"],"author":{"@type":"Person","description":"Viva La Vida","email":"reuixiy@gmail.com","image":"https://io-oi.me/icons/apple-touch-icon.png","url":"https://io-oi.me/","name":"reuixiy"},"license":"在保留本文作者及本文链接的前提下，非商业用途随意转载分享。","publisher":{"@type":"Organization","name":"reuixiy","logo":{"@type":"ImageObject","url":"https://io-oi.me/icons/apple-touch-icon.png"},"url":"https://io-oi.me/"},"mainEntityOfPage":{"@type":"WebSite","@id":"https://io-oi.me/"}}</script><meta name=twitter:card content="summary_large_image"><meta name=twitter:site content="@reuixiy"><meta name=twitter:creator content="@reuixiy"><meta property="og:title" content="为 NexT 添加相关╱热门╱推荐文章"><meta property="og:description" content="本文主要针对下面两个 Hexo 插件的一些配置难点和个人定制，至于两个插件的安装和基础配置，略……"><meta property="og:url" content="https://io-oi.me/tech/related-popular-recommended-posts/"><meta property="og:site_name" content="reuixiy"><meta property="og:locale" content="zh"><meta property="og:image" content="https://io-oi.me/images/hexo-next-optimization-4.jpg"><meta property="og:type" content="article"><meta property="article:published_time" content="2018-05-09T15:41:07+08:00"><meta property="article:modified_time" content="2019-08-20T14:00:19+08:00"><meta property="article:section" content="tech"><link rel=preconnect href=https://www.google-analytics.com crossorigin><script async src="https://www.googletagmanager.com/gtag/js?id=UA-100434861-1"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date),gtag('config','UA-100434861-1')</script><link rel=stylesheet href="https://fonts.googleapis.com/css2?family=Lato:wght@700&text=reuixiy&display=swap" media=print onload="this.media='all'"><noscript><link rel=stylesheet href="https://fonts.googleapis.com/css2?family=Lato:wght@700&text=reuixiy&display=swap"></noscript></head><body><div class=container><header class=header><div class=header-wrapper><div class="header-inner single"><div class=site-brand><a href=/ class=brand>reuixiy</a></div><nav class=nav><ul class=menu id=menu><li class=menu-item><a href=/life/><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon life"><path d="M301.1 212c4.4 4.4 4.4 11.9.0 16.3l-9.7 9.7c-4.4 4.7-11.9 4.7-16.6.0l-10.5-10.5c-4.4-4.7-4.4-11.9.0-16.6l9.7-9.7c4.4-4.4 11.9-4.4 16.6.0l10.5 10.8zm-30.2-19.7c3-3 3-7.8.0-10.5-2.8-3-7.5-3-10.5.0-2.8 2.8-2.8 7.5.0 10.5 3.1 2.8 7.8 2.8 10.5.0zm-26 5.3c-3 2.8-3 7.5.0 10.2 2.8 3 7.5 3 10.5.0 2.8-2.8 2.8-7.5.0-10.2-3-3-7.7-3-10.5.0zm72.5-13.3c-19.9-14.4-33.8-43.2-11.9-68.1 21.6-24.9 40.7-17.2 59.8.8 11.9 11.3 29.3 24.9 17.2 48.2-12.5 23.5-45.1 33.2-65.1 19.1zm47.7-44.5c-8.9-10-23.3 6.9-15.5 16.1 7.4 9 32.1 2.4 15.5-16.1zM504 256c0 137-111 248-248 248S8 393 8 256 119 8 256 8s248 111 248 248zm-66.2 42.6c2.5-16.1-20.2-16.6-25.2-25.7-13.6-24.1-27.7-36.8-54.5-30.4 11.6-8 23.5-6.1 23.5-6.1.3-6.4.0-13-9.4-24.9 3.9-12.5.3-22.4.3-22.4 15.5-8.6 26.8-24.4 29.1-43.2 3.6-31-18.8-59.2-49.8-62.8-22.1-2.5-43.7 7.7-54.3 25.7-23.2 40.1 1.4 70.9 22.4 81.4-14.4-1.4-34.3-11.9-40.1-34.3-6.6-25.7 2.8-49.8 8.9-61.4.0.0-4.4-5.8-8-8.9.0.0-13.8.0-24.6 5.3 11.9-15.2 25.2-14.4 25.2-14.4.0-6.4-.6-14.9-3.6-21.6-5.4-11-23.8-12.9-31.7 2.8.1-.2.3-.4.4-.5-5 11.9-1.1 55.9 16.9 87.2-2.5 1.4-9.1 6.1-13 10-21.6 9.7-56.2 60.3-56.2 60.3-28.2 10.8-77.2 50.9-70.6 79.7.3 3 1.4 5.5 3 7.5-2.8 2.2-5.5 5-8.3 8.3-11.9 13.8-5.3 35.2 17.7 24.4 15.8-7.2 29.6-20.2 36.3-30.4.0.0-5.5-5-16.3-4.4 27.7-6.6 34.3-9.4 46.2-9.1 8 3.9 8-34.3 8-34.3.0-14.7-2.2-31-11.1-41.5 12.5 12.2 29.1 32.7 28 60.6-.8 18.3-15.2 23-15.2 23-9.1 16.6-43.2 65.9-30.4 106 0 0-9.7-14.9-10.2-22.1-17.4 19.4-46.5 52.3-24.6 64.5 26.6 14.7 108.8-88.6 126.2-142.3 34.6-20.8 55.4-47.3 63.9-65 22 43.5 95.3 94.5 101.1 59z"/></svg><span class=menu-item-name>生活</span></a></li><li class=menu-item><a href=/tech/><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon tech"><path d="M512 256c0 141.2-114.7 256-256 256C114.8 512 0 397.3.0 256S114.7.0 256 0s256 114.7 256 256zm-32 0c0-123.2-100.3-224-224-224C132.5 32 32 132.5 32 256s100.5 224 224 224 224-100.5 224-224zM160.9 124.6l86.9 37.1-37.1 86.9-86.9-37.1 37.1-86.9zm110 169.1 46.6 94h-14.6l-50-1e2-48.9 1e2h-14l51.1-106.9-22.3-9.4 6-14 68.6 29.1-6 14.3-16.5-7.1zm-11.8-116.3 68.6 29.4-29.4 68.3L230 246l29.1-68.6zm80.3 42.9 54.6 23.1-23.4 54.3-54.3-23.1 23.1-54.3z"/></svg><span class=menu-item-name>技术</span></a></li><li class=menu-item><a href=/about/><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" class="icon about"><path d="M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zm0 96c48.6.0 88 39.4 88 88s-39.4 88-88 88-88-39.4-88-88 39.4-88 88-88zm0 344c-58.7.0-111.3-26.6-146.5-68.2 18.8-35.4 55.6-59.8 98.5-59.8 2.4.0 4.8.4 7.1 1.1 13 4.2 26.6 6.9 40.9 6.9s28-2.7 40.9-6.9c2.3-.7 4.7-1.1 7.1-1.1 42.9.0 79.7 24.4 98.5 59.8C359.3 421.4 306.7 448 248 448z"/></svg><span class=menu-item-name>关于</span></a></li><li class=menu-item><a id=theme-switcher href=#><span class="icon theme-icon-light">🌞</span><span class="icon theme-icon-dark">🌙</span></a></li></ul></nav></div></div><input type=checkbox id=nav-toggle aria-hidden=true>
+<label for=nav-toggle class=nav-toggle></label><label for=nav-toggle class=nav-curtain></label></header><main class="main single" id=main><div class=main-inner><article class="content post h-entry" data-align=justify data-type=tech data-toc-num=true><h1 class="post-title p-name">为 NexT 添加相关╱热门╱推荐文章</h1><div class="post-body e-content"><p>本文主要针对下面两个 Hexo 插件的一些配置难点和个人定制，至于两个插件的安装和基础配置，略去。</p><div class=table-container><table><thead><tr><th style=text-align:center>插件</th><th style=text-align:center>说明</th><th style=text-align:center>特点</th></tr></thead><tbody><tr><td style=text-align:center><a href=https://github.com/tea3/hexo-related-popular-posts target=_blank rel=noopener>hexo-related-popular-posts</a></td><td style=text-align:center>最新版本已集成，可以在<em class=emphasis-point>主题</em>配置文件 <code>_config.yml</code> 中配置。</td><td style=text-align:center>可以利用 Google Analytics API 将高浏览量（热门）的文章按配置比例加入推荐列表。</td></tr><tr><td style=text-align:center><a href=https://github.com/huiwang/hexo-recommended-posts target=_blank rel=noopener>hexo-recommended-posts</a></td><td style=text-align:center>主题尚未集成，但插件本身支持自动显示，自定义位置请查看 README。</td><td style=text-align:center>可以与其它博客相关联，不限于自己博客。</td></tr></tbody></table></div><h2 id=note-标签样式><a href=#note-标签样式 class=anchor-link>#</a>note 标签样式</h2><p>1）hexo-related-popular-posts</p><p>编辑文件：</p><div class=highlight><pre class=chroma><code class=language-diff data-lang=diff>&lt;!-- 文件位置：~/blog/themes/next/layout/_macro/post-related.swig --&gt;
+
+{% set popular_posts = popular_posts_json(theme.related_posts.params, post) %}
+{% if popular_posts.json and popular_posts.json.length &gt; 0 %}
+<span class=gi>+ &lt;div class=&#34;post-body&#34;&gt;
+</span><span class=gi>+ &lt;div class=&#34;note primary&#34;&gt;
+</span><span class=gi></span>  &lt;div class=&#34;popular-posts-header&#34;&gt;{{ theme.related_posts.title | default(__(&#39;post.related_posts&#39;)) }}&lt;/div&gt;
+  &lt;ul class=&#34;popular-posts&#34;&gt;
+  {% for popular_post in popular_posts.json %}
+    &lt;li class=&#34;popular-posts-item&#34;&gt;
+      {% if popular_post.date and popular_post.date != &#39;&#39; %}
+        &lt;div class=&#34;popular-posts-date&#34;&gt;{{ popular_post.date }}&lt;/div&gt;
+      {% endif %}
+      {% if popular_post.img &amp;&amp; popular_post.img != &#39;&#39; %}
+        &lt;div class=&#34;popular-posts-img&#34;&gt;&lt;img src=&#34;{{ popular_post.img }}&#34; /&gt;&lt;/div&gt;
+      {% endif %}
+      &lt;div class=&#34;popular-posts-title&#34;&gt;&lt;a href=&#34;{{ popular_post.path }}&#34; rel=&#34;bookmark&#34;&gt;{{ popular_post.title }}&lt;/a&gt;&lt;/div&gt;
+      {% if popular_post.excerpt &amp;&amp; popular_post.excerpt != &#39;&#39; %}
+        &lt;div class=&#34;popular-posts-excerpt&#34;&gt;&lt;p&gt;{{ popular_post.excerpt }}&lt;/p&gt;&lt;/div&gt;
+      {% endif %}
+    &lt;/li&gt;
+  {% endfor %}
+  &lt;/ul&gt;
+<span class=gi>+ &lt;/div&gt;
+</span><span class=gi>+ &lt;/div&gt;
+</span><span class=gi></span>{% endif %}
+</code></pre></div><p>2）hexo-recommended-posts</p><p>如果你是按照 README 中的<a href=https://github.com/iissnan/hexo-theme-next/pull/2054/files target=_blank rel=noopener>这种方法</a>自定义的位置，那么类似：</p><div class=highlight><pre class=chroma><code class=language-diff data-lang=diff>&lt;!-- 文件位置：~/blog/themes/next/layout/_macro/recommended_posts.swig --&gt;
+
+<span class=gi>+ &lt;div class=&#34;post-body&#34;&gt;
+</span><span class=gi>+ &lt;div class=&#34;note primary&#34;&gt;
+</span><span class=gi></span>&lt;div class=&#34;recommended_posts&#34;&gt;
+    {% set recommended_posts = recommended_posts(post, site) %}
+    {% if recommended_posts.length &gt; 0 %}
+    &lt;h1&gt;{{ __(&#39;post.recommended_posts&#39;) }} &lt;/h1&gt;
+    &lt;ul&gt;
+        {% for link in recommended_posts  %}
+            &lt;li&gt;&lt;a href=&#34;{{ link.permalink }}&#34;&gt;{{ link.title }}&lt;/a&gt;&lt;/li&gt;
+        {% endfor %}
+    &lt;/ul&gt;
+    {% endif %}
+&lt;/div&gt;
+<span class=gi>+ &lt;/div&gt;
+</span><span class=gi>+ &lt;/div&gt;
+</span></code></pre></div><h2 id=热门文章><a href=#热门文章 class=anchor-link>#</a>热门文章</h2><p>对于 hexo-related-popular-posts，如何配置 Google Analytics API 呢？前提是你的博客启用了 <a href=https://analytics.google.com/ target=_blank rel=noopener>Google Analytics</a>，然后按照插件 <a href=https://github.com/tea3/hexo-related-popular-posts/wiki/More-Settings#popular-posts target=_blank rel=noopener>Wiki</a> 中的说明，去<a href=https://www.npmjs.com/package/ga-analytics target=_blank rel=noopener>这个页面</a>按照步骤去 <a href=https://console.developers.google.com/ target=_blank rel=noopener>Google Developer Console</a> 启用 Analytics API，然后在凭据那创建一个服务帐号密钥凭据，然后：</p><p><img src=/images/hexo-next-optimization-4.jpg alt=hexo-next-optimization-4.jpg><span class=caption>◎ 下载 .p12 文件</span></p><p>将 <code>.p12</code> 文件转换为 <code>.pem</code> 文件（the password is always “notasecret”）：</p><p><img src=/images/hexo-next-optimization-5.jpg alt=hexo-next-optimization-5.jpg><span class=caption>◎ 在 Linux 下输入命令</span></p><p>并将这个 <code>.pem</code> 文件放到<em class=emphasis-point>站点</em>文件夹根目录下，接下来查看一下服务帐号的 ID：</p><p><img src=/images/hexo-next-optimization-6.jpg alt=hexo-next-optimization-6.jpg><span class=caption>◎ 查看入口</span></p><p>博主不太记得具体流程，不记得要不要先创建服务帐号，所以给一张服务帐号的设置图：</p><p><img src=/images/hexo-next-optimization-7.jpg alt=hexo-next-optimization-7.jpg><span class=caption>◎ 设置入口</span></p><p>接下来就是配置 Google Analytics，先去 <a href=https://analytics.google.com/ target=_blank rel=noopener>Google Analytics</a>，点配置，然后：</p><p><img src=/images/hexo-next-optimization-8.jpg alt=hexo-next-optimization-8.jpg></p><p>添加新用户，注意权限：</p><p><img src=/images/hexo-next-optimization-9.jpg alt=hexo-next-optimization-9.jpg></p><p>在<em class=emphasis-point>站点</em>配置文件中加入：</p><div class=highlight><pre class=chroma><code class=language-yml data-lang=yml><span class=c># 文件位置：~/blog/_config.yml</span><span class=w>
+</span><span class=w>
+</span><span class=w></span><span class=nt>popularPosts</span><span class=p>:</span><span class=w>
+</span><span class=w>  </span><span class=nt>googleAnalyticsAPI</span><span class=p>:</span><span class=w>
+</span><span class=w>    </span><span class=nt>clientId</span><span class=p>:</span><span class=w> </span><span class=l>analytics-api@notional-arc-190007.iam.gserviceaccount.com</span><span class=w>
+</span><span class=w>    </span><span class=nt>serviceEmail</span><span class=p>:</span><span class=w> </span><span class=l>analytics-api@notional-arc-190007.iam.gserviceaccount.com</span><span class=w>
+</span><span class=w>    </span><span class=nt>key</span><span class=p>:</span><span class=w> </span><span class=l>/google-services-private-key.pem</span><span class=w>
+</span><span class=w>    </span><span class=nt>viewId</span><span class=p>:</span><span class=w> </span><span class=m>165363044</span><span class=w>
+</span></code></pre></div><p>查看 viewId：</p><p><img src=/images/hexo-next-optimization-10.jpg alt=hexo-next-optimization-10.jpg><span class=caption>◎ 入口</span></p><p><img src=/images/hexo-next-optimization-11.jpg alt=hexo-next-optimization-11.jpg></p><p>最后，在<em class=emphasis-point>主题</em>配置文件中配置比例：</p><div class=highlight><pre class=chroma><code class=language-yml data-lang=yml><span class=c># 文件位置：~/blog/themes/next/_config.yml</span><span class=w>
+</span><span class=w>
+</span><span class=w></span><span class=nt>maxCount</span><span class=p>:</span><span class=w> </span><span class=m>5</span><span class=w>
+</span><span class=w></span><span class=nt>PPMixingRate</span><span class=p>:</span><span class=w> </span><span class=m>0.2</span><span class=w>
+</span></code></pre></div><p>也就是高浏览量的文章占 5 篇中的 1 篇。</p><h2 id=将两个插件的特点结合><a href=#将两个插件的特点结合 class=anchor-link>#</a>将两个插件的特点结合</h2><p>即，将热门文章与外链推荐结合。如果你是最新的主题，那么参考<a href=https://github.com/theme-next/hexo-theme-next/pull/109/files target=_blank rel=noopener>这里</a>，将添加的代码和文件全部删除。再参考<a href=https://github.com/iissnan/hexo-theme-next/pull/2054/files target=_blank rel=noopener>这里</a>，将添加的代码和文件全部添加。</p><p>然后将下面的内容替换原文件中的内容：</p><div class=highlight><pre class=chroma><code class=language-html data-lang=html><span class=c>&lt;!-- 文件位置：~/blog/themes/next/layout/_macro/recommended_posts.swig --&gt;</span>
+
+<span class=p>&lt;</span><span class=nt>div</span> <span class=na>class</span><span class=o>=</span><span class=s>&#34;post-body&#34;</span><span class=p>&gt;</span>
+<span class=p>&lt;</span><span class=nt>div</span> <span class=na>class</span><span class=o>=</span><span class=s>&#34;note primary&#34;</span><span class=p>&gt;</span>
+<span class=p>&lt;</span><span class=nt>div</span> <span class=na>class</span><span class=o>=</span><span class=s>&#34;recommended_posts&#34;</span><span class=p>&gt;</span>
+     {% set recommended_posts = recommended_posts(post, site) %}
+     <span class=p>&lt;</span><span class=nt>h4</span> <span class=na>class</span><span class=o>=</span><span class=s>&#34;recommended&#34;</span><span class=p>&gt;</span>{{ __(&#39;post.recommended_posts&#39;) }} <span class=p>&lt;/</span><span class=nt>h4</span><span class=p>&gt;</span>
+     <span class=p>&lt;</span><span class=nt>ul</span> <span class=na>class</span><span class=o>=</span><span class=s>&#34;recommended-ul&#34;</span><span class=p>&gt;</span>
+         {{ popular_posts( { maxCount: 5 , ulClass: &#39;popular-posts&#39; , PPMixingRate: 0.4 , isDate: false , isImage: false , isExcerpt: false } , post ) }}
+         {% for link in recommended_posts  %}
+             <span class=p>&lt;</span><span class=nt>li</span><span class=p>&gt;&lt;</span><span class=nt>a</span> <span class=na>href</span><span class=o>=</span><span class=s>&#34;{{ link.permalink }}&#34;</span> <span class=na>target</span><span class=o>=</span><span class=s>&#34;_blank&#34;</span><span class=p>&gt;</span>{{ link.title }}<span class=p>&lt;/</span><span class=nt>a</span><span class=p>&gt;&lt;/</span><span class=nt>li</span><span class=p>&gt;</span>
+         {% endfor %}
+     <span class=p>&lt;/</span><span class=nt>ul</span><span class=p>&gt;</span>
+<span class=p>&lt;/</span><span class=nt>div</span><span class=p>&gt;</span>
+<span class=p>&lt;/</span><span class=nt>div</span><span class=p>&gt;</span>
+<span class=p>&lt;/</span><span class=nt>div</span><span class=p>&gt;</span>
+</code></pre></div><p>再编辑文件：</p><div class=highlight><pre class=chroma><code class=language-diff data-lang=diff>// 文件位置：~/blog/node_modules/hexo-related-popular-posts/lib/helper.js
+
+module.exports = ( inPost, inOptions, inHexo ) =&gt; {
+    const listJson   = require(&#39;./list-json.js&#39;)
+    const lj         = listJson.getList(inOptions, inPost, inHexo)
+    let returnHTML   = &#39;&#39;
+
+    let generateHTML = (list) =&gt; {
+        let ret = &#39;&#39;
+        ret += `&lt;li class=&#34;${lj.class}-item&#34;&gt;`
+
+        if (list.date &amp;&amp; list.date != &#39;&#39;) {
+            ret += `&lt;div class=&#34;${lj.class}-date&#34;&gt;${list.date}&lt;/div&gt;`
+        }
+
+        if (list.img &amp;&amp; list.img != &#39;&#39;) {
+            ret += `&lt;div class=&#34;${lj.class}-img&#34;&gt;&lt;img src=&#34;${list.img}&#34; /&gt;&lt;/div&gt;`
+        }
+<span class=gd>-        ret += `&lt;div class=&#34;${lj.class}-title&#34;&gt;&lt;h3&gt;&lt;a href=&#34;${list.path}&#34; title=&#34;${list.title}&#34; rel=&#34;bookmark&#34;&gt;${list.title}&lt;/a&gt;&lt;/h3&gt;&lt;/div&gt;`
+</span><span class=gd></span><span class=gi>+        ret += `&lt;div class=&#34;${lj.class}-title&#34;&gt;&lt;a href=&#34;${list.path}&#34; rel=&#34;bookmark&#34;&gt;${list.title}&lt;/a&gt;&lt;/div&gt;`
+</span><span class=gi></span>        if (list.excerpt &amp;&amp;  list.excerpt != &#39;&#39;) {
+            ret += `&lt;div class=&#34;${lj.class}-excerpt&#34;&gt;&lt;p&gt;${list.excerpt}&lt;/p&gt;&lt;/div&gt;`
+        }
+
+        ret +=  `&lt;/li&gt;`
+        return ret
+    }
+
+    for (let i=0; i &lt; lj.json.length; i++) {
+        returnHTML += generateHTML(lj.json[i])
+    }
+
+<span class=gd>-    if (returnHTML != &#39;&#39;) returnHTML = `&lt;ul class=&#34;${lj.class}&#34;&gt;${returnHTML}&lt;/ul&gt;`
+</span><span class=gd></span><span class=gi>+    if (returnHTML != &#39;&#39;) returnHTML = `&lt;div&gt;${returnHTML}&lt;/div&gt;`
+</span><span class=gi></span>
+  return returnHTML
+}
+</code></pre></div><p>然后往 <code>custom.styl</code> 里加入：</p><div class=highlight><pre class=chroma><code class=language-css data-lang=css><span class=c>/* 文件位置：~/blog/themes/next/source/css/_custom/custom.styl */</span>
+
+<span class=c>/* 自定义的推荐文章样式 */</span>
+<span class=nt>h4</span><span class=p>.</span><span class=nc>recommended</span> <span class=p>{</span>
+    <span class=k>margin-top</span><span class=p>:</span> <span class=mi>5</span><span class=kt>px</span> <span class=cp>!important</span><span class=p>;</span>
+    <span class=k>border-left</span><span class=p>:</span> <span class=kc>none</span> <span class=cp>!important</span><span class=p>;</span>
+    <span class=k>margin-left</span><span class=p>:</span> <span class=mi>0</span><span class=kt>px</span> <span class=cp>!important</span><span class=p>;</span>
+    <span class=k>padding-left</span><span class=p>:</span> <span class=mi>0</span><span class=kt>px</span> <span class=cp>!important</span><span class=p>;</span>
+<span class=p>}</span>
+<span class=p>@</span><span class=k>media</span> <span class=o>(</span><span class=nt>max-width</span><span class=o>:</span> <span class=nt>767px</span><span class=o>)</span> <span class=p>{</span>
+    <span class=p>.</span><span class=nc>recommended-ul</span> <span class=p>{</span>
+        <span class=k>margin-left</span><span class=p>:</span> <span class=mi>-40</span><span class=kt>px</span><span class=p>;</span>
+    <span class=p>}</span>
+<span class=p>}</span>
+<span class=p>.</span><span class=nc>recommended_posts</span> <span class=p>{</span>
+    <span class=k>margin-top</span><span class=p>:</span> <span class=mi>15</span><span class=kt>px</span><span class=p>;</span>
+<span class=p>}</span>
+</code></pre></div><p>最后贴出我的站点配置文件的相关配置：</p><div class=highlight><pre class=chroma><code class=language-yml data-lang=yml><span class=c># 文件位置：~/blog/_config.yml</span><span class=w>
+</span><span class=w>
+</span><span class=w></span><span class=nt>popularPosts</span><span class=p>:</span><span class=w>
+</span><span class=w>  </span><span class=nt>googleAnalyticsAPI</span><span class=p>:</span><span class=w>
+</span><span class=w>    </span><span class=nt>clientId</span><span class=p>:</span><span class=w> </span><span class=l>analytics-api@notional-arc-190007.iam.gserviceaccount.com</span><span class=w>
+</span><span class=w>    </span><span class=nt>serviceEmail</span><span class=p>:</span><span class=w> </span><span class=l>analytics-api@notional-arc-190007.iam.gserviceaccount.com</span><span class=w>
+</span><span class=w>    </span><span class=nt>key</span><span class=p>:</span><span class=w> </span><span class=l>/google-services-private-key.pem</span><span class=w>
+</span><span class=w>    </span><span class=nt>viewId</span><span class=p>:</span><span class=w> </span><span class=m>165363044</span><span class=w>
+</span><span class=w>  </span><span class=nt>cache</span><span class=p>:</span><span class=w>
+</span><span class=w>    </span><span class=nt>path</span><span class=p>:</span><span class=w> </span><span class=l>hexo-popular-related-posts-cached.json</span><span class=w>
+</span><span class=w>
+</span><span class=w></span><span class=nt>recommended_posts</span><span class=p>:</span><span class=w>
+</span><span class=w>  </span><span class=nt>server</span><span class=p>:</span><span class=w> </span><span class=l>https://api.truelaurel.com</span><span class=w>
+</span><span class=w>  </span><span class=nt>timeoutInMillis</span><span class=p>:</span><span class=w> </span><span class=m>5000</span><span class=w>
+</span><span class=w>  </span><span class=nt>internalLinks</span><span class=p>:</span><span class=w> </span><span class=m>1</span><span class=w>
+</span><span class=w>  </span><span class=nt>externalLinks</span><span class=p>:</span><span class=w> </span><span class=m>1</span><span class=w>
+</span><span class=w>  </span><span class=nt>fixedNumber</span><span class=p>:</span><span class=w> </span><span class=kc>false</span><span class=w>
+</span><span class=w>  </span><span class=nt>autoDisplay</span><span class=p>:</span><span class=w> </span><span class=kc>false</span><span class=w>
+</span><span class=w>  </span><span class=nt>excludePattern</span><span class=p>:</span><span class=w> </span><span class=p>[</span><span class=l>davidfnck.com]</span><span class=w>
+</span></code></pre></div><p>当然，有个小 bug，由于 hexo-recommended-posts 的 <code>internalLinks</code> 不能为 0，所以最终在由两个插件共同生成的推荐列表中就可能会重复 1 篇文章。</p></div></article><footer class=minimal-footer><div class=post-tag><a href=/tags/hexo/ rel=tag class=post-tag-link>#hexo</a></div><div class=post-category><a href=/tech/ class="post-category-link active">tech</a> | <a href=/life/ class=post-category-link>life</a></div></footer></div></main></div><script>'serviceWorker'in navigator&&window.addEventListener('load',function(){navigator.serviceWorker.register('/sw.js')})</script><script src=/js/medium-zoom.min.js></script><script>mediumZoom(document.querySelectorAll('div.post-body img'),{background:'hsla(var(--color-bg-h), var(--color-bg-s), var(--color-bg-l), 0.95)'})</script></body></html>
